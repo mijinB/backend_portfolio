@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+import Hero from './components/sections/Hero.vue'
+</script>
 
 <template>
-    <h1>됐니? 된거니?!</h1>
+    <Hero />
 </template>
 
-<style scoped></style>
+<style></style>

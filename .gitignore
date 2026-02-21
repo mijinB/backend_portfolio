@@ -37,3 +37,8 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+
+# Agent
+.agent/
+.agents/
+skills-lock.json

@@ -31,9 +31,11 @@
 }
 
 :root {
-    --bg-color: #0b0e14;
-    --text-color: #e0e0e0;
-    --point-color: #00d8ff;
+    --bg-color: #10141d;
+    --text-color: #d1d5db;
+    --point-color: #60a5fa;
+    --sub-point-color: #2dd4bf;
+    font-size: 16px;
 }
 
 * {
@@ -43,5 +45,12 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Pretendard';
-    line-height: 1.6;
+    line-height: 1.2;
+}
+.inner {
+    width: 95%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1.25rem 0;
+    text-align: center;
 }
