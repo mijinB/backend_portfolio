@@ -36,9 +36,9 @@ const selectCategory = (category) => {
 
 <style scoped>
 .test {
-    width: 20px;
-    height: 20px;
-    margin: 0 auto 4000px;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0 auto 250rem;
     background-color: #fff;
 }
 
@@ -67,22 +67,22 @@ ul.stack-nav li.active {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
-    width: 500px;
-    margin-top: 20px;
+    gap: 1rem;
+    width: 31.25rem;
+    margin-top: 1.25rem;
 }
 .stack-logos > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 3.75rem;
+    height: 3.75rem;
     border-radius: 50%;
     background-color: #fff;
     transition: all 0.3s ease;
 }
 .stack-logos > div > img {
-    width: 40px;
+    width: 2.5rem;
 }
 .stack-logos .is-dimmed {
     opacity: 0.2;
