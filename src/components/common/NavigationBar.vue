@@ -64,7 +64,6 @@ ul {
     border-radius: 2rem;
     background-color: #d1d5db3b;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 ul .top {
     display: flex;

@@ -33,7 +33,7 @@ h1 > strong::after {
     width: 100%;
     height: 1.3rem;
     border-radius: 0.8rem;
-    background-color: color-mix(in srgb, var(--point-color), transparent 20%);
+    background-color: color-mix(in srgb, var(--sub-point-color), transparent 20%);
     content: '';
 }
 .description {
