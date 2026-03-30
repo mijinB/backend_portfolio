@@ -76,13 +76,13 @@ ul .top a {
     border-radius: 50%;
 }
 ul .top a:nth-child(1) {
-    background-color: #60a5fa;
+    background-color: var(--sub-point-color);
 }
 ul .top a:nth-child(2) {
-    background-color: #2dd4bf;
+    background-color: var(--point-color);
 }
 ul .top a:nth-child(3) {
-    background-color: #d1d5db;
+    background-color: var(--text-color);
 }
 ul li {
     padding: 0.5rem 1rem;

@@ -14,7 +14,7 @@
                 </ul>
 
                 <div class="stack-logos">
-                    <div v-for="logo in STACK_LOGOS" :data-type="logo.type" :title="logo.title" :class="{ 'is-dimmed': activeCategory !== 'ALL' && activeCategory !== logo.type }">
+                    <div v-for="logo in STACK_LOGOS" :key="logo.title" :data-type="logo.type" :title="logo.title" :class="{ 'is-dimmed': activeCategory !== 'ALL' && activeCategory !== logo.type }">
                         <img :src="logo.url" :alt="logo.title" />
                     </div>
                 </div>
@@ -35,13 +35,6 @@ const selectCategory = (category) => {
 </script>
 
 <style scoped>
-.test {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin: 0 auto 250rem;
-    background-color: #fff;
-}
-
 .stack-wrap {
     display: flex;
     flex-direction: column;
@@ -54,7 +47,7 @@ ul.stack-nav {
     padding: 0.8rem 2rem;
     border-radius: 2rem;
     background-color: var(--text-color);
-    color: #7d7d7d;
+    color: #a5a5a5;
     font-weight: 600;
 }
 ul.stack-nav li:hover,
