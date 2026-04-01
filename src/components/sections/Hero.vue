@@ -5,13 +5,15 @@
             <p class="description">보이지 않는 곳의 완벽함이, 보이는 곳의 신뢰를 만든다고 믿습니다.</p>
             <a href="/resume.pdf" download="백미진_이력서.pdf" class="download-btn">
                 이력서 다운로드
-                <img src="@/assets/images/download.png" alt="download icon" />
+                <DownloadIcon />
             </a>
         </div>
     </section>
 </template>
 
-<script></script>
+<script setup>
+import DownloadIcon from '@/assets/icons/download.svg'
+</script>
 
 <style scoped>
 h1 {
@@ -55,7 +57,7 @@ h1 > strong::after {
 .download-btn:hover {
     background-color: #d1d5db36;
 }
-.download-btn img {
+.download-btn svg {
     vertical-align: sub;
     width: 1.2rem;
 }

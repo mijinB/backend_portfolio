@@ -1,14 +1,14 @@
 <template>
-    <section id="works">
+    <section id="work">
         <div class="inner">
             <div class="section-header">
-                <span class="section-title">WORKS</span>
+                <span class="section-title">WORK</span>
                 <p class="section-desc">실무에서의 문제 해결과 개인적인 기술 탐구 과정을 담은 프로젝트 이력입니다.</p>
             </div>
 
             <div>
                 <div class="divider">
-                    <span class="divider-text">Works Experience</span>
+                    <span class="divider-text">Work Experience</span>
                 </div>
                 <ul>
                     <li v-for="work in WORK_EXPERIENCE" class="info-item">

@@ -1,4 +1,4 @@
-export const STACK_CATEGORIES = ['ALL', 'BACKEND', 'FRONTEND', 'DB & INFRA', 'TOOLS']
+export const STACK_CATEGORIES = ['ALL', 'BACKEND', 'DB & INFRA', 'FRONTEND', 'TOOLS']
 
 export const STACK_LOGOS = [
     {
@@ -30,6 +30,16 @@ export const STACK_LOGOS = [
         title: 'JSP',
         url: '/images/stack/JSP.png',
         type: 'BACKEND',
+    },
+    {
+        title: 'MySQL',
+        url: '/images/stack/MySQL.png',
+        type: 'DB & INFRA',
+    },
+    {
+        title: 'AWS',
+        url: '/images/stack/AWS.png',
+        type: 'DB & INFRA',
     },
     {
         title: 'Vue',
@@ -70,16 +80,6 @@ export const STACK_LOGOS = [
         title: 'jQuery',
         url: '/images/stack/jQuery.png',
         type: 'FRONTEND',
-    },
-    {
-        title: 'MySQL',
-        url: '/images/stack/MySQL.png',
-        type: 'DB & INFRA',
-    },
-    {
-        title: 'AWS',
-        url: '/images/stack/AWS.png',
-        type: 'DB & INFRA',
     },
     {
         title: 'Git',

@@ -14,9 +14,7 @@
                 </ul>
 
                 <div class="stack-logos">
-                    <div v-for="logo in STACK_LOGOS" :key="logo.title" :data-type="logo.type" :title="logo.title" :class="{ 'is-dimmed': activeCategory !== 'ALL' && activeCategory !== logo.type }">
-                        <img :src="logo.url" :alt="logo.title" />
-                    </div>
+                        <img v-for="logo in STACK_LOGOS" :key="logo.title" :src="logo.url" :alt="logo.title" :title="logo.title" :data-type="logo.type" :class="{ 'is-dimmed': activeCategory !== 'ALL' && activeCategory !== logo.type }" />
                 </div>
             </div>
         </div>
@@ -60,22 +58,12 @@ ul.stack-nav li.active {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    width: 31.25rem;
+    gap: 1.2rem;
+    width: 30rem;
     margin-top: 1.25rem;
 }
-.stack-logos > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3.75rem;
-    height: 3.75rem;
-    border-radius: 50%;
-    background-color: #fff;
-    transition: all 0.3s ease;
-}
-.stack-logos > div > img {
-    width: 2.5rem;
+.stack-logos > img {
+    width: 3.5rem;
 }
 .stack-logos .is-dimmed {
     opacity: 0.2;
