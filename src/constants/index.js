@@ -1,109 +1,140 @@
+import JavaImg from '@/assets/images/stack/Java.png'
+import SpringBootImg from '@/assets/images/stack/SpringBoot.png'
+import PythonImg from '@/assets/images/stack/Python.png'
+import DjangoImg from '@/assets/images/stack/Django.png'
+import MyBatisImg from '@/assets/images/stack/MyBatis.png'
+import JSPImg from '@/assets/images/stack/JSP.png'
+import MySQLImg from '@/assets/images/stack/MySQL.png'
+import AWSImg from '@/assets/images/stack/AWS.png'
+import VueImg from '@/assets/images/stack/Vue.png'
+import ReactImg from '@/assets/images/stack/React.png'
+import ViteImg from '@/assets/images/stack/Vite.png'
+import JavaScriptImg from '@/assets/images/stack/JavaScript.png'
+import TypeScriptImg from '@/assets/images/stack/TypeScript.png'
+import HTML5Img from '@/assets/images/stack/HTML5.png'
+import CSS3Img from '@/assets/images/stack/CSS3.png'
+import jQueryImg from '@/assets/images/stack/jQuery.png'
+import GitImg from '@/assets/images/stack/Git.png'
+import GitHubImg from '@/assets/images/stack/GitHub.png'
+import IntelliJImg from '@/assets/images/stack/IntelliJ.png'
+import VSCodeImg from '@/assets/images/stack/VSCode.png'
+import EclipseImg from '@/assets/images/stack/Eclipse.png'
+import JPAImg from '@/assets/images/stack/JPA.png'
+import SwaggerImg from '@/assets/images/stack/Swagger.png'
+import SQLiteImg from '@/assets/images/stack/SQLite.png'
+import BeautifulSoupImg from '@/assets/images/stack/BeautifulSoup.png'
+
+import NoteIcon from '@/assets/icons/note.svg'
+import PlaneIcon from '@/assets/icons/plane.svg'
+import MonitorIcon from '@/assets/icons/monitor.svg'
+import CatIcon from '@/assets/icons/cat.svg'
+
 export const STACK_CATEGORIES = ['ALL', 'BACKEND', 'DB & INFRA', 'FRONTEND', 'TOOLS']
 
 export const STACK_LOGOS = [
     {
         title: 'Java',
-        url: '/images/stack/Java.png',
+        url: JavaImg,
         type: 'BACKEND',
     },
     {
         title: 'SpringBoot',
-        url: '/images/stack/SpringBoot.png',
+        url: SpringBootImg,
         type: 'BACKEND',
     },
     {
         title: 'Python',
-        url: '/images/stack/Python.png',
+        url: PythonImg,
         type: 'BACKEND',
     },
     {
         title: 'Django',
-        url: '/images/stack/Django.png',
+        url: DjangoImg,
         type: 'BACKEND',
     },
     {
         title: 'MyBatis',
-        url: '/images/stack/MyBatis.png',
+        url: MyBatisImg,
         type: 'BACKEND',
     },
     {
         title: 'JSP',
-        url: '/images/stack/JSP.png',
+        url: JSPImg,
         type: 'BACKEND',
     },
     {
         title: 'MySQL',
-        url: '/images/stack/MySQL.png',
+        url: MySQLImg,
         type: 'DB & INFRA',
     },
     {
         title: 'AWS',
-        url: '/images/stack/AWS.png',
+        url: AWSImg,
         type: 'DB & INFRA',
     },
     {
         title: 'Vue',
-        url: '/images/stack/Vue.png',
+        url: VueImg,
         type: 'FRONTEND',
     },
     {
         title: 'React',
-        url: '/images/stack/React.png',
+        url: ReactImg,
         type: 'FRONTEND',
     },
     {
         title: 'Vite',
-        url: '/images/stack/Vite.png',
+        url: ViteImg,
         type: 'FRONTEND',
     },
     {
         title: 'JavaScript',
-        url: '/images/stack/JavaScript.png',
+        url: JavaScriptImg,
         type: 'FRONTEND',
     },
     {
         title: 'TypeScript',
-        url: '/images/stack/TypeScript.png',
+        url: TypeScriptImg,
         type: 'FRONTEND',
     },
     {
         title: 'HTML5',
-        url: '/images/stack/HTML5.png',
+        url: HTML5Img,
         type: 'FRONTEND',
     },
     {
         title: 'CSS3',
-        url: '/images/stack/CSS3.png',
+        url: CSS3Img,
         type: 'FRONTEND',
     },
     {
         title: 'jQuery',
-        url: '/images/stack/jQuery.png',
+        url: jQueryImg,
         type: 'FRONTEND',
     },
     {
         title: 'Git',
-        url: '/images/stack/Git.png',
+        url: GitImg,
         type: 'TOOLS',
     },
     {
         title: 'GitHub',
-        url: '/images/stack/GitHub.png',
+        url: GitHubImg,
         type: 'TOOLS',
     },
     {
         title: 'IntelliJ',
-        url: '/images/stack/IntelliJ.png',
+        url: IntelliJImg,
         type: 'TOOLS',
     },
     {
         title: 'VSCode',
-        url: '/images/stack/VSCode.png',
+        url: VSCodeImg,
         type: 'TOOLS',
     },
     {
         title: 'Eclipse',
-        url: '/images/stack/Eclipse.png',
+        url: EclipseImg,
         type: 'TOOLS',
     },
 ]
@@ -538,5 +569,312 @@ export const SIDE_PROJECTS = [
             'ESLint와 Prettier를 프로젝트에 도입하여 코드 스타일 가이드를 자동화하고 일관된 코드 품질 및 가독성 확보',
             'GitHub README를 통해 개발 스펙 및 컴포넌트 사용 가이드를 상세히 문서화하여 전달함으로써 프로젝트 인수인계 및 운영 연속성 보장',
         ],
+    },
+]
+
+export const PROJECTS = [
+    {
+        icon: NoteIcon,
+        title: 'PlanPad (플랜패드)',
+        desc: '개인 맞춤형 일정 관리와 태그 기반 메모를 제공하는 웹 애플리케이션',
+        stacks: [
+            {
+                title: 'Java',
+                url: JavaImg,
+            },
+            {
+                title: 'SpringBoot',
+                url: SpringBootImg,
+            },
+            {
+                title: 'JPA',
+                url: JPAImg,
+            },
+            {
+                title: 'MySQL',
+                url: MySQLImg,
+            },
+            {
+                title: 'AWS',
+                url: AWSImg,
+            },
+            {
+                title: 'Swagger',
+                url: SwaggerImg,
+            },
+        ],
+        detail: {
+            icon: NoteIcon,
+            title: 'PlanPad (플랜패드)',
+            desc: '개인 맞춤형 일정 관리와 태그 기반 메모를 제공하는 웹 애플리케이션',
+            teamSize: '2명',
+            period: '2024.12. - 2025.04.',
+            links: [
+                {
+                    url: 'https://github.com/mijinB/planpad',
+                    txt: 'GitHub Repository',
+                },
+                {
+                    url: '#',
+                    txt: 'PlanPad',
+                },
+            ],
+            stacks: [
+                {
+                    title: 'Java',
+                    url: JavaImg,
+                },
+                {
+                    title: 'SpringBoot',
+                    url: SpringBootImg,
+                },
+                {
+                    title: 'JPA',
+                    url: JPAImg,
+                },
+                {
+                    title: 'MySQL',
+                    url: MySQLImg,
+                },
+                {
+                    title: 'AWS',
+                    url: AWSImg,
+                },
+                {
+                    title: 'Swagger',
+                    url: SwaggerImg,
+                },
+            ],
+            details: [
+                {
+                    heading: '1. 확장성 있는 레이어드 아키텍처 및 데이터 모델링',
+                    txt: [
+                        'Controller-Service-Domain-Repository 패턴을 엄격히 준수하여 비즈니스 로직과 데이터 접근 계층 분리, 유지보수성 극대화',
+                        'Enum을 적극 활용하여 일부 데이터를 상수로 관리함으로써 런타임 에러 방지, 데이터 무결성 상승, 타입 안정성 확보',
+                        '모든 API 통신에 Request/Response DTO를 적용하여 엔티티 노출을 차단하고, 필요한 데이터만 전송하여 네트워크 오버헤드 감소',
+                    ],
+                },
+                {
+                    heading: '2. 견고한 보안 및 인증 시스템 구축 (Spring Security & JWT)',
+                    txt: [
+                        'requestMatchers를 통해 인가된 사용자만 특정 자원에 접근할 수 있도록 화이트리스트 기반 보안 설정 구현',
+                        'JWT Blacklist Service를 구현하여 로그아웃된 토큰의 재사용 원천 차단, Stateless 인증 방식의 보안 취약점 보완',
+                        '24시간의 토큰 유효기간 설정을 통해 사용자 편의성과 보안성 사이의 균형을 맞춘 인증 프로세스 설계',
+                    ],
+                },
+                {
+                    heading: '3. 일관된 인터페이스 제공 및 협업 도구 활용',
+                    txt: [
+                        '@RestControllerAdvice를 활용하여 모든 에러 응답을 일관된 JSON 형식으로 반환, 프론트엔드 개발자가 예측 가능하도록 에러 처리 지원',
+                        'Swagger(OpenAPI 3.0)를 도입하여 프론트엔드 개발자와의 커뮤니케이션 비용 절감, 실시간 API 테스트 환경 제공',
+                    ],
+                },
+                {
+                    heading: '4. 클라우드 인프라 배포 및 운영 경험',
+                    txt: ['AWS EC2를 활용하여 리눅스 환경에서 애플리케이션 배포', '백그라운드 프로세스를 관리하여 서비스가 24시간 중단 없이 가동될 수 있도록 가용성 확보 및 서버 안정성 확보'],
+                },
+            ],
+        },
+    },
+    {
+        icon: PlaneIcon,
+        title: 'Airbnb-Clone Service',
+        desc: 'Django와 React로 구현한 숙소 예약 및 커뮤니티 플랫폼',
+        stacks: [
+            {
+                title: 'Python',
+                url: PythonImg,
+            },
+            {
+                title: 'Django',
+                url: DjangoImg,
+            },
+            {
+                title: 'React',
+                url: ReactImg,
+            },
+            {
+                title: 'SQLite',
+                url: SQLiteImg,
+            },
+        ],
+        detail: {
+            icon: PlaneIcon,
+            title: 'Airbnb-Clone Service',
+            desc: 'Django와 React로 구현한 숙소 예약 및 커뮤니티 플랫폼',
+            teamSize: '1명',
+            period: '2024.06. - 2024.07. (4주 과정)',
+            links: [
+                {
+                    url: 'https://github.com/mijinB/airbnb_clone_backend',
+                    txt: 'GitHub Repository (Backend)',
+                },
+                {
+                    url: 'https://github.com/mijinB/airbnb_clone_frontend',
+                    txt: 'GitHub Repository (Frontend)',
+                },
+            ],
+            stacks: [
+                {
+                    title: 'Python',
+                    url: PythonImg,
+                },
+                {
+                    title: 'Django',
+                    url: DjangoImg,
+                },
+                {
+                    title: 'React',
+                    url: ReactImg,
+                },
+                {
+                    title: 'SQLite',
+                    url: SQLiteImg,
+                },
+            ],
+            details: [
+                {
+                    heading: '1. Django REST Framework 기반의 데이터 설계 및 API 구축',
+                    txt: [
+                        '숙소, 예약, 리뷰 등 다대다(M:N) 및 일대다(1:N) 관계를 명확히 정의하여 데이터 무결성을 유지하는 아키텍처 설계',
+                        '프론트엔드와 효율적으로 데이터를 주고받기 위한 리소스 중심의 RESTful API를 설계하고, Django의 Serializer를 통해 효율적인 데이터 변환 처리 수행',
+                    ],
+                },
+                {
+                    heading: '2. 보안 및 사용자 인증 시스템 고도화',
+                    txt: [
+                        'Session 및 JWT 기반 인증과 더불어 소셜 로그인(Kakao, Google) 연동을 통해 사용자 접근성 향상 및 보안성 강화',
+                        '소유자만 숙소 정보를 수정하거나 리뷰를 관리할 수 있도록 서버 측 권한 검증 로직 적용',
+                    ],
+                },
+                {
+                    heading: '3. React & Chakra UI 기반의 반응형 프론트엔드 구축',
+                    txt: [
+                        'Chakra UI를 활용하여 디자인 시스템의 일관성을 유지하고, 모바일과 데스크탑 환경에 모두 대응하는 반응형 레이아웃 구현',
+                        'React Query 등을 활용하여 서버 데이터 상태를 효율적으로 관리하고 사용자에게 끊김 없는 데이터 로딩 경험 제공',
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        icon: MonitorIcon,
+        title: 'Web Scraper & Flask Server',
+        desc: '다중 채용 플랫폼의 채용 공고를 실시간 수집·정제해 제공하는 구직 정보 아카이빙 플랫폼',
+        stacks: [
+            {
+                title: 'Python',
+                url: PythonImg,
+            },
+            {
+                title: 'BeautifulSoup',
+                url: BeautifulSoupImg,
+            },
+        ],
+        detail: {
+            icon: MonitorIcon,
+            title: 'Web Scraper & Flask Server',
+            desc: '다중 채용 플랫폼의 채용 공고를 실시간 수집·정제해 제공하는 구직 정보 아카이빙 플랫폼',
+            teamSize: '1명',
+            period: '2024.06. (2주 과정)',
+            links: [
+                {
+                    url: 'https://github.com/mijinB/web_scrapper_challenges',
+                    txt: 'GitHub Repository',
+                },
+            ],
+            stacks: [
+                {
+                    title: 'Python',
+                    url: PythonImg,
+                },
+                {
+                    title: 'BeautifulSoup',
+                    url: BeautifulSoupImg,
+                },
+            ],
+            details: [
+                {
+                    heading: '1. 다중 소스 대상 실시간 크롤링 엔진 구축',
+                    txt: ['eautifulSoup4와 Requests를 활용하여 각기 다른 HTML 구조를 가진 3개 이상의 글로벌 채용 플랫폼에서 데이터를 동시 추출하는 로직 구현'],
+                },
+                {
+                    heading: '2. 비정형 데이터의 구조화 및 정제',
+                    txt: ['웹 사이트별로 상이한 태그 구조에서 직무명, 회사명, 상세 링크 등 핵심 정보만을 파싱하여 파이썬 Dictionary 기반의 정형 데이터셋으로 변환'],
+                },
+                {
+                    heading: '3. On-demand 방식의 데이터 서빙 레이어 구현',
+                    txt: ['Flask 프레임워크를 활용하여 사용자 요청 시점에 즉시 크롤링을 수행하고, 결과를 웹 인터페이스로 서빙하는 실시간 응답 구조 설계'],
+                },
+            ],
+        },
+    },
+    {
+        icon: CatIcon,
+        title: 'React-based Interactive Portfolio',
+        desc: 'Notion 스타일을 반영해 구현한 React 기반 개인 브랜딩 포트폴리오',
+        stacks: [
+            {
+                title: 'React',
+                url: ReactImg,
+            },
+            {
+                title: 'JavaScript',
+                url: JavaScriptImg,
+            },
+            {
+                title: 'TypeScript',
+                url: TypeScriptImg,
+            },
+        ],
+        detail: {
+            icon: CatIcon,
+            title: 'React-based Interactive Portfolio',
+            desc: 'Notion 스타일을 반영해 구현한 React 기반 개인 브랜딩 포트폴리오',
+            teamSize: '1명',
+            period: '2023.10. - 2023.11.',
+            links: [
+                {
+                    url: 'https://github.com/mijinB/pofol_front_react',
+                    txt: 'GitHub Repository',
+                },
+                {
+                    url: 'https://mijinb.github.io/pofol_front_react/#/info',
+                    txt: '2023 Mijin Portfolio',
+                },
+            ],
+            stacks: [
+                {
+                    title: 'React',
+                    url: ReactImg,
+                },
+                {
+                    title: 'JavaScript',
+                    url: JavaScriptImg,
+                },
+                {
+                    title: 'TypeScript',
+                    url: TypeScriptImg,
+                },
+            ],
+            details: [
+                {
+                    heading: '1. 컴포넌트 기반 인터랙티브 기능 구현',
+                    txt: ['팝업 노출 시 배경 오버레이 처리, 클립보드 링크 복사 알림 토스트 메시지(3초 노출) 등 세밀한 사용자 피드백 로직 구현'],
+                },
+                {
+                    heading: '2. 동적 레이아웃 제어 시스템 설계',
+                    txt: ['Option Button을 통한 "전체 너비" 토글 기능 및 Framer Motion을 활용한 아코디언 방식의 서브 메뉴(접기/펴기) 인터랙션 구현'],
+                },
+                {
+                    heading: '3. 데이터 시각화 및 모달 시스템',
+                    txt: ['Notion의 "갤러리 보기" 형식을 참고하여 프로젝트 요약 정보를 카드 형태로 구성하고, 상세 정보 조회를 위한 고도화된 모달 시스템 구축'],
+                },
+                {
+                    heading: '4. 디바이스 최적화 반응형 웹 구현',
+                    txt: ['Media Query를 활용하여 데스크탑 환경부터 모바일까지 각 디바이스 크기에 최적화된 화면 구성 및 레이아웃 전환 로직 적용'],
+                },
+            ],
+        },
     },
 ]

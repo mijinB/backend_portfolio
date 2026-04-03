@@ -9,11 +9,11 @@
             <li :class="{ active: activeSection === 'stack' }">
                 <a href="#stack">STACK</a>
             </li>
-            <li :class="{ active: activeSection === 'works' }">
-                <a href="#works">WORKS</a>
+            <li :class="{ active: activeSection === 'work' }">
+                <a href="#work">WORK</a>
             </li>
-            <li :class="{ active: activeSection === 'log' }">
-                <a href="#log">LOG</a>
+            <li :class="{ active: activeSection === 'projects' }">
+                <a href="#projects">PROJECTS</a>
             </li>
             <li :class="{ active: activeSection === 'credentials' }">
                 <a href="#credentials">CREDENTIALS</a>

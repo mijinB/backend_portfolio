@@ -52,7 +52,7 @@
 
                                 <div class="detail-wrapper" :class="{ 'is-open': activeDetailId === proj.id }">
                                     <div class="info-card detail-inner">
-                                        <p v-for="text in proj.detail">{{ text }}</p>
+                                        <p v-for="text in proj.detail" class="dot-item">{{ text }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -67,9 +67,9 @@
 </template>
 
 <script setup>
-import { WORK_EXPERIENCE, SIDE_PROJECTS } from '@/constants/index'
 import { ref } from 'vue'
-import ExpDetailPopup from '../ExpDetailPopup.vue'
+import { WORK_EXPERIENCE, SIDE_PROJECTS } from '@/constants/index'
+import ExpDetailPopup from '@/components/ExpDetailPopup.vue'
 import StarIcon from '@/assets/icons/star.svg'
 import OpenIcon from '@/assets/icons/open.svg'
 import ChevronIcon from '@/assets/icons/chevron.svg'
@@ -140,22 +140,6 @@ const toggleDetail = (id) => {
     background-color: rgba(255, 255, 255, 0.03);
     text-align: left;
     line-height: 1.3;
-}
-.info-card p {
-    position: relative;
-    margin-bottom: 0.6rem;
-    padding-left: 0.85rem;
-}
-.info-card p::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.5em;
-    width: 0.3rem;
-    height: 0.3rem;
-    border-radius: 50%;
-    background: var(--point-color);
-    opacity: 0.6;
 }
 
 .status-svg {
