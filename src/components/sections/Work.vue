@@ -89,34 +89,6 @@ const toggleDetail = (id) => {
 </script>
 
 <style scoped>
-.info-item {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
-}
-.info-item .info-side {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-}
-.info-item .info-side .date {
-    color: var(--gray-color);
-}
-.info-item .info-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    width: 31.25rem;
-}
-.info-item .content-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-.info-item .content-subtitle {
-    color: var(--gray-color);
-}
 .content-action {
     display: flex;
     align-items: center;
@@ -142,18 +114,6 @@ const toggleDetail = (id) => {
     line-height: 1.3;
 }
 
-.status-svg {
-    width: 1.25rem;
-    height: 1.25rem;
-}
-.icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    stroke: var(--point-color);
-}
-.status-icon {
-    stroke: var(--gray-color);
-}
 .status-icon.active {
     stroke: var(--point-color);
     filter: drop-shadow(0 0 5px rgba(74, 222, 128, 0.5));
@@ -161,8 +121,10 @@ const toggleDetail = (id) => {
 .open-icon {
     width: 1.2rem;
     height: 1.2rem;
+    stroke: var(--point-color);
 }
 .chevron-icon {
+    stroke: var(--point-color);
     transition: transform 0.3s ease;
 }
 .chevron-icon.is-rotated {

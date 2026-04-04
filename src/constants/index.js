@@ -142,7 +142,7 @@ export const STACK_LOGOS = [
 export const WORK_EXPERIENCE = [
     {
         status: 'active',
-        date: '2023 - 현재',
+        date: '2023.11. - 현재',
         company: '제이티통신(아이알리미)',
         brief: '국내 1위 자녀 안심망 서비스 (누적 가입자 170만 명)',
         stacks: ['Backend & DB: Java, Spring Boot, MyBatis, JSP, MySQL, AWS', 'Frontend: Vue, Vite, JavaScript, HTML5, CSS3, jQuery', 'Tools: Git, GitHub, IntelliJ, VSCode, Eclipse'],
@@ -876,5 +876,39 @@ export const PROJECTS = [
                 },
             ],
         },
+    },
+]
+
+export const EDUCATION = {
+    date: '2017.03. - 2021.02.',
+    school: '원광대학교',
+    major: '컴퓨터소프트웨어공학과 졸업',
+}
+
+export const CERTIFICATIONS = [
+    {
+        date: '2020.12.',
+        name: '정보처리기사',
+        issuer: '한국산업인력공단',
+    },
+    {
+        date: '2025.12.',
+        name: '정보통신기술자경력수첩(중급)',
+        issuer: '한국정보통신공사협회',
+    },
+    {
+        date: '2024.09.',
+        name: 'SQL개발자(SQLD)',
+        issuer: '한국데이터베이스진흥센터',
+    },
+    {
+        date: '2020.08.',
+        name: 'ICDL Start Certification',
+        issuer: '한국생산성본부',
+    },
+    {
+        date: '2021.02.',
+        name: '컴퓨터활용능력1급',
+        issuer: '대한상공회의소',
     },
 ]
