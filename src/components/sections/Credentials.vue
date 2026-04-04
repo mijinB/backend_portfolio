@@ -49,10 +49,6 @@ import StarIcon from '@/assets/icons/star.svg'
 </script>
 
 <style scoped>
-.inner {
-    padding-bottom: 8rem;
-}
-
 .info-item .info-side {
     width: 11rem;
 }

@@ -5,6 +5,7 @@ import Stack from './components/sections/Stack.vue'
 import Work from './components/sections/Work.vue'
 import Projects from './components/sections/Projects.vue'
 import Credentials from './components/sections/Credentials.vue'
+import Contacts from './components/sections/Contacts.vue'
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import Credentials from './components/sections/Credentials.vue'
     <Work />
     <Projects />
     <Credentials />
+    <Contacts />
 </template>
 
 <style></style>

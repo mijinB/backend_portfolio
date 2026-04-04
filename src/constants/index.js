@@ -912,3 +912,20 @@ export const CERTIFICATIONS = [
         issuer: '대한상공회의소',
     },
 ]
+
+export const CONTACTS = [
+    {
+        label: 'Email',
+        value: 'bmj13465@gmail.com',
+        href: 'mailto:bmj13465@gmail.com',
+        note: '가장 빠르게 확인하는 연락 수단입니다.',
+        external: false,
+    },
+    {
+        label: 'GitHub',
+        value: '@mijinB',
+        href: 'https://github.com/mijinB',
+        note: '프로젝트 코드와 작업 흔적을 확인하실 수 있습니다.',
+        external: true,
+    },
+]

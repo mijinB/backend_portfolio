@@ -18,8 +18,8 @@
             <li :class="{ active: activeSection === 'credentials' }">
                 <a href="#credentials">CREDENTIALS</a>
             </li>
-            <li :class="{ active: activeSection === 'contact' }">
-                <a href="#contact">CONTACT</a>
+            <li :class="{ active: activeSection === 'contacts' }">
+                <a href="#contacts">CONTACTS</a>
             </li>
         </ul>
     </nav>
