@@ -25,7 +25,7 @@
                     <span class="divider-text">Certifications</span>
                 </div>
                 <ul>
-                    <li v-for="cert in CERTIFICATIONS">
+                    <li v-for="cert in CERTIFICATIONS" :key="cert.name">
                         <div class="info-item">
                             <div class="info-side">
                                 <StarIcon class="icon status-icon" :class="{ active: cert.status === 'active' }" />
@@ -60,5 +60,18 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+@media (max-width: 640px) {
+    .info-item .info-side {
+        width: auto;
+    }
+    .info-item .info-content {
+        width: 100%;
+    }
+
+    ul {
+        gap: 1.5rem;
+    }
 }
 </style>

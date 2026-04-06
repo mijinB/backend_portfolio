@@ -1,9 +1,11 @@
 <template>
     <div class="modal-overlay" @click="$emit('close')">
         <div class="modal-content" @click.stop>
-            <button class="close-btn" @click="$emit('close')">
-                <CloseIcon class="icon" />
-            </button>
+            <div class="close-btn-wrap">
+                <button class="close-btn" @click="$emit('close')">
+                    <CloseIcon class="icon" />
+                </button>
+            </div>
 
             <div v-for="info in data" :key="info.mainTitle">
                 <h3>{{ info.mainTitle }}</h3>
@@ -135,5 +137,18 @@ h3 {
     color: var(--text-color);
     font-size: 0.82rem;
     line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+    h3 {
+        font-size: 1.05rem;
+    }
+
+    .project-card {
+        padding: 1rem 1.1rem;
+    }
+    .project-card .sub-title {
+        font-size: 0.92rem;
+    }
 }
 </style>

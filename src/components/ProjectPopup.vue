@@ -1,9 +1,11 @@
 <template>
     <div class="modal-overlay" @click="$emit('close')">
         <div class="modal-content" @click.stop>
-            <button class="close-btn" @click="$emit('close')">
-                <CloseIcon class="icon" />
-            </button>
+            <div class="close-btn-wrap">
+                <button class="close-btn" @click="$emit('close')">
+                    <CloseIcon class="icon" />
+                </button>
+            </div>
 
             <div class="content-info">
                 <div class="info-title">
@@ -34,7 +36,7 @@
                 <div class="info-item">
                     <span class="item-title">기술 스택</span>
                     <div>
-                        <img v-for="stack in data.stacks" :src="stack.url" :alt="stack.title" :title="stack.title" />
+                        <img v-for="stack in data.stacks" :key="stack.title" :src="stack.url" :alt="stack.title" :title="stack.title" />
                     </div>
                 </div>
             </div>
@@ -82,12 +84,10 @@ defineEmits(['close'])
     margin-bottom: 1rem;
     padding-right: 2rem;
 }
-
 .info-title svg {
     width: 1.5rem;
     height: 1.5rem;
 }
-
 .info-title h3 {
     color: var(--text-color);
     font-size: 1.4rem;
@@ -178,5 +178,26 @@ hr {
 }
 .content-detail .dot-item::before {
     background: var(--text-color) !important;
+}
+
+@media (max-width: 640px) {
+    .info-title h3 {
+        font-size: 1.2rem;
+    }
+
+    .info-item {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+    }
+    .info-item .item-title {
+        min-height: auto;
+        color: var(--point-color);
+        font-size: 0.75rem;
+        opacity: 0.8;
+    }
+
+    hr {
+        margin: 1.75rem 0;
+    }
 }
 </style>

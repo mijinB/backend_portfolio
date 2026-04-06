@@ -51,7 +51,7 @@ import OpenIcon from '@/assets/icons/open.svg'
     text-align: left;
 }
 .contact-card {
-    width: 30rem;
+    width: min(30rem, 100%);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 1rem;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.035) 0%, rgba(255, 255, 255, 0.015) 100%);
@@ -109,5 +109,17 @@ import OpenIcon from '@/assets/icons/open.svg'
     color: var(--gray-color);
     line-height: 1.5;
     word-break: keep-all;
+}
+
+@media (max-width: 640px) {
+    .contact-list {
+        margin-top: 2rem;
+    }
+    .contact-card-link {
+        padding: 1.25rem;
+    }
+    .contact-link {
+        font-size: 1.05rem;
+    }
 }
 </style>

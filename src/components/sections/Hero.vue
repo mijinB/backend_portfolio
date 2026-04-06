@@ -47,7 +47,9 @@ h1 > strong::after {
     word-break: keep-all;
 }
 .download-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     margin-top: 2rem;
     padding: 0.5rem 1.3rem;
     border-radius: 0.5rem;
@@ -58,7 +60,33 @@ h1 > strong::after {
     background-color: #d1d5db36;
 }
 .download-btn svg {
-    vertical-align: sub;
+    flex-shrink: 0;
     width: 1.2rem;
+}
+
+@media (max-width: 640px) {
+    h1 {
+        margin-top: 3rem;
+        font-size: 1.9rem;
+        word-break: keep-all;
+        letter-spacing: 0.05rem;
+    }
+    h1 > strong::after {
+        bottom: 0.1rem;
+        height: 1rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    .download-btn {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 641px) {
+    h1 {
+        font-size: 2.3rem;
+        letter-spacing: 0.1rem;
+    }
 }
 </style>

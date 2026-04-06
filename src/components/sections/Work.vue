@@ -11,7 +11,7 @@
                     <span class="divider-text">Work Experience</span>
                 </div>
                 <ul>
-                    <li v-for="work in WORK_EXPERIENCE" class="info-item">
+                    <li v-for="work in WORK_EXPERIENCE" :key="work.company" class="info-item">
                         <div class="info-side">
                             <StarIcon class="icon status-icon" :class="{ active: work.status === 'active' }" />
                             <span class="date">{{ work.date }}</span>
@@ -20,7 +20,7 @@
                             <span class="content-title">{{ work.company }}</span>
                             <p class="content-subtitle">{{ work.brief }}</p>
                             <div class="info-card">
-                                <span v-for="stack in work.stacks">{{ stack }}</span>
+                                <span v-for="stack in work.stacks" :key="stack">{{ stack }}</span>
                             </div>
                             <button class="content-action" @click="openDetail(work.detail)">
                                 <OpenIcon class="icon open-icon" />
@@ -34,7 +34,7 @@
                     <span class="divider-text">Side Projects</span>
                 </div>
                 <ul>
-                    <li v-for="proj in SIDE_PROJECTS">
+                    <li v-for="proj in SIDE_PROJECTS" :key="proj.id">
                         <div class="info-item">
                             <div class="info-side">
                                 <StarIcon class="icon status-icon" :class="{ active: proj.status === 'active' }" />
@@ -43,7 +43,7 @@
                             <div class="info-content">
                                 <span class="content-title">{{ proj.title }}</span>
                                 <div class="stack-wrap">
-                                    <span v-for="stack in proj.stacks">{{ stack }}</span>
+                                    <span v-for="stack in proj.stacks" :key="stack">{{ stack }}</span>
                                 </div>
                                 <button class="content-action" @click="toggleDetail(proj.id)">
                                     <ChevronIcon class="icon chevron-icon" :class="{ 'is-rotated': activeDetailId === proj.id }" />
@@ -52,7 +52,7 @@
 
                                 <div class="detail-wrapper" :class="{ 'is-open': activeDetailId === proj.id }">
                                     <div class="info-card detail-inner">
-                                        <p v-for="text in proj.detail" class="dot-item">{{ text }}</p>
+                                        <p v-for="text in proj.detail" :key="text" class="dot-item">{{ text }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -143,5 +143,15 @@ const toggleDetail = (id) => {
 }
 .detail-inner {
     padding: 1.25rem;
+}
+
+@media (max-width: 640px) {
+    .info-card {
+        padding: 1rem;
+    }
+
+    .detail-wrapper.is-open {
+        max-height: 80rem;
+    }
 }
 </style>

@@ -7,7 +7,7 @@
             </div>
 
             <ul>
-                <li v-for="proj in PROJECTS" class="project-card" @click="openDetail(proj.detail)">
+                <li v-for="proj in PROJECTS" :key="proj.title" class="project-card" @click="openDetail(proj.detail)">
                     <div class="card-content">
                         <div class="card-title">
                             <component :is="proj.icon" />
@@ -16,7 +16,7 @@
                         <p class="desc">{{ proj.desc }}</p>
                     </div>
                     <div class="stack-wrap">
-                        <img v-for="stack in proj.stacks" :src="stack.url" :alt="stack.title" :title="stack.title" />
+                        <img v-for="stack in proj.stacks" :key="stack.title" :src="stack.url" :alt="stack.title" :title="stack.title" />
                     </div>
                 </li>
             </ul>
@@ -47,6 +47,7 @@ ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
     margin-top: 2.2rem;
+    text-align: left;
 }
 ul li.project-card {
     display: flex;
@@ -119,5 +120,15 @@ ul li.project-card:active {
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 0.5rem;
     background-color: rgba(255, 255, 255, 0.035);
+}
+
+@media (max-width: 640px) {
+    ul {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    ul li.project-card {
+        min-height: auto;
+    }
 }
 </style>

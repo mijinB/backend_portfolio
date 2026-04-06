@@ -7,19 +7,19 @@
                 <a href="#"></a>
             </li>
             <li :class="{ active: activeSection === 'stack' }">
-                <a href="#stack">STACK</a>
+                <a href="#stack" @click.prevent="handleNavClick('stack')">STACK</a>
             </li>
             <li :class="{ active: activeSection === 'work' }">
-                <a href="#work">WORK</a>
+                <a href="#work" @click.prevent="handleNavClick('work')">WORK</a>
             </li>
             <li :class="{ active: activeSection === 'projects' }">
-                <a href="#projects">PROJECTS</a>
+                <a href="#projects" @click.prevent="handleNavClick('projects')">PROJECTS</a>
             </li>
             <li :class="{ active: activeSection === 'credentials' }">
-                <a href="#credentials">CREDENTIALS</a>
+                <a href="#credentials" @click.prevent="handleNavClick('credentials')">CREDENTIALS</a>
             </li>
             <li :class="{ active: activeSection === 'contacts' }">
-                <a href="#contacts">CONTACTS</a>
+                <a href="#contacts" @click.prevent="handleNavClick('contacts')">CONTACTS</a>
             </li>
         </ul>
     </nav>
@@ -29,6 +29,19 @@
 import { onMounted, ref } from 'vue'
 
 const activeSection = ref('')
+
+const handleNavClick = (id) => {
+    const target = document.getElementById(id)
+
+    if (!target) return
+
+    target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+    })
+
+    window.history.replaceState(null, '', `#${id}`)
+}
 
 onMounted(() => {
     const observer = new IntersectionObserver(
@@ -53,6 +66,13 @@ onMounted(() => {
 nav {
     position: sticky;
     top: 0;
+    padding: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+nav::-webkit-scrollbar {
+    display: none;
 }
 ul {
     display: inline-flex;
@@ -64,6 +84,7 @@ ul {
     border-radius: 2rem;
     background-color: #d1d5db3b;
     backdrop-filter: blur(10px);
+    white-space: nowrap;
 }
 ul .top {
     display: flex;
@@ -91,5 +112,11 @@ ul li.active {
     border-radius: 2rem;
     background-color: var(--bg-color);
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
 }
 </style>
