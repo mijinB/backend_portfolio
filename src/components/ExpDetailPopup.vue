@@ -18,7 +18,7 @@
                         <ul>
                             <li v-for="task in project.tasks" :key="task.heading" class="dot-item">
                                 <p class="item-heading">{{ task.heading }}</p>
-                                <p v-for="value in task.detail" :key="value" class="item-detail">{{ value }}</p>
+                                <p class="item-detail">{{ task.detail }}</p>
                             </li>
                         </ul>
                     </div>
@@ -28,7 +28,7 @@
                         <ul>
                             <li v-for="achievement in project.achievements" :key="achievement.heading" class="dot-item">
                                 <p class="item-heading">{{ achievement.heading }}</p>
-                                <p v-for="value in achievement.detail" :key="value" class="item-detail">{{ value }}</p>
+                                <p class="item-detail">{{ achievement.detail }}</p>
                             </li>
                         </ul>
                     </div>
