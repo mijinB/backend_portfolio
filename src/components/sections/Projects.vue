@@ -44,7 +44,7 @@ const closeDetail = () => {
 <style scoped>
 ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem;
     margin-top: 2.2rem;
     text-align: left;
@@ -53,7 +53,7 @@ ul li.project-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 13.5rem;
+    min-height: 14rem;
     padding: 1.35rem 1.3rem 1.2rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 1rem;
@@ -120,6 +120,16 @@ ul li.project-card:active {
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 0.5rem;
     background-color: rgba(255, 255, 255, 0.035);
+}
+
+@media (max-width: 1024px) {
+    ul {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    ul li.project-card {
+        width: min(100%, 37.5rem);
+    }
 }
 
 @media (max-width: 640px) {

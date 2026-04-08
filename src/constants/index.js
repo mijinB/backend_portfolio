@@ -489,10 +489,6 @@ export const PROJECTS = [
                     url: 'https://github.com/mijinB/planpad',
                     txt: 'GitHub Repository',
                 },
-                {
-                    url: '#',
-                    txt: 'PlanPad',
-                },
             ],
             stacks: [
                 {
@@ -680,74 +676,6 @@ export const PROJECTS = [
                 {
                     heading: '3. On-demand 방식의 데이터 서빙 레이어 구현',
                     txt: ['Flask 프레임워크를 활용하여 사용자 요청 시점에 즉시 크롤링을 수행하고, 결과를 웹 인터페이스로 서빙하는 실시간 응답 구조 설계'],
-                },
-            ],
-        },
-    },
-    {
-        icon: CatIcon,
-        title: 'React-based Interactive Portfolio',
-        desc: 'Notion 스타일을 반영해 구현한 React 기반 개인 브랜딩 포트폴리오',
-        stacks: [
-            {
-                title: 'React',
-                url: ReactImg,
-            },
-            {
-                title: 'JavaScript',
-                url: JavaScriptImg,
-            },
-            {
-                title: 'TypeScript',
-                url: TypeScriptImg,
-            },
-        ],
-        detail: {
-            icon: CatIcon,
-            title: 'React-based Interactive Portfolio',
-            desc: 'Notion 스타일을 반영해 구현한 React 기반 개인 브랜딩 포트폴리오',
-            teamSize: '1명',
-            period: '2023.10. - 2023.11.',
-            links: [
-                {
-                    url: 'https://github.com/mijinB/pofol_front_react',
-                    txt: 'GitHub Repository',
-                },
-                {
-                    url: 'https://mijinb.github.io/pofol_front_react/#/info',
-                    txt: '2023 Mijin Portfolio',
-                },
-            ],
-            stacks: [
-                {
-                    title: 'React',
-                    url: ReactImg,
-                },
-                {
-                    title: 'JavaScript',
-                    url: JavaScriptImg,
-                },
-                {
-                    title: 'TypeScript',
-                    url: TypeScriptImg,
-                },
-            ],
-            details: [
-                {
-                    heading: '1. 컴포넌트 기반 인터랙티브 기능 구현',
-                    txt: ['팝업 노출 시 배경 오버레이 처리, 클립보드 링크 복사 알림 토스트 메시지(3초 노출) 등 세밀한 사용자 피드백 로직 구현'],
-                },
-                {
-                    heading: '2. 동적 레이아웃 제어 시스템 설계',
-                    txt: ['Option Button을 통한 "전체 너비" 토글 기능 및 Framer Motion을 활용한 아코디언 방식의 서브 메뉴(접기/펴기) 인터랙션 구현'],
-                },
-                {
-                    heading: '3. 데이터 시각화 및 모달 시스템',
-                    txt: ['Notion의 "갤러리 보기" 형식을 참고하여 프로젝트 요약 정보를 카드 형태로 구성하고, 상세 정보 조회를 위한 고도화된 모달 시스템 구축'],
-                },
-                {
-                    heading: '4. 디바이스 최적화 반응형 웹 구현',
-                    txt: ['Media Query를 활용하여 데스크탑 환경부터 모바일까지 각 디바이스 크기에 최적화된 화면 구성 및 레이아웃 전환 로직 적용'],
                 },
             ],
         },
