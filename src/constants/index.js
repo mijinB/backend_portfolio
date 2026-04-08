@@ -43,16 +43,6 @@ export const STACK_LOGOS = [
         type: 'BACKEND',
     },
     {
-        title: 'Python',
-        url: PythonImg,
-        type: 'BACKEND',
-    },
-    {
-        title: 'Django',
-        url: DjangoImg,
-        type: 'BACKEND',
-    },
-    {
         title: 'MyBatis',
         url: MyBatisImg,
         type: 'BACKEND',
@@ -60,6 +50,16 @@ export const STACK_LOGOS = [
     {
         title: 'JSP',
         url: JSPImg,
+        type: 'BACKEND',
+    },
+    {
+        title: 'Python',
+        url: PythonImg,
+        type: 'BACKEND',
+    },
+    {
+        title: 'Django',
+        url: DjangoImg,
         type: 'BACKEND',
     },
     {
@@ -98,6 +98,11 @@ export const STACK_LOGOS = [
         type: 'FRONTEND',
     },
     {
+        title: 'jQuery',
+        url: jQueryImg,
+        type: 'FRONTEND',
+    },
+    {
         title: 'HTML5',
         url: HTML5Img,
         type: 'FRONTEND',
@@ -105,11 +110,6 @@ export const STACK_LOGOS = [
     {
         title: 'CSS3',
         url: CSS3Img,
-        type: 'FRONTEND',
-    },
-    {
-        title: 'jQuery',
-        url: jQueryImg,
         type: 'FRONTEND',
     },
     {
@@ -145,7 +145,7 @@ export const WORK_EXPERIENCE = [
         date: '2023.11. - 현재',
         company: '제이티통신(아이알리미)',
         brief: '국내 1위 자녀 안심망 서비스 (누적 가입자 170만 명)',
-        stacks: ['Backend & DB: Java, Spring Boot, MyBatis, JSP, MySQL, AWS', 'Frontend: Vue, Vite, JavaScript, HTML5, CSS3, jQuery', 'Tools: Git, GitHub, IntelliJ, VSCode, Eclipse'],
+        stacks: ['Backend & DB: Java, Spring Boot, MyBatis, JSP, MySQL, AWS', 'Frontend: Vue, Vite, JavaScript, jQuery, HTML5, CSS3', 'Tools: Git, GitHub, IntelliJ, VSCode, Eclipse'],
         detail: [
             {
                 mainTitle: '1. 비즈니스 로직 설계 및 운영 자동화',
