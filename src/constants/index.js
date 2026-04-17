@@ -174,7 +174,11 @@ export const WORK_EXPERIENCE = [
                         achievements: [
                             {
                                 heading: '대시보드 응답 속도 개선',
-                                detail: '운영 환경 기준 TTFB를 3.01s에서 887.19ms로, LCP를 3.8초에서 1.7초 수준으로 개선했습니다.',
+                                detail: '운영 환경 기준 TTFB를 3.01초에서 0.89초로, LCP를 3.8초에서 1.7초 수준으로 개선했습니다.',
+                            },
+                            {
+                                heading: '메시지전송 화면 응답 속도 개선',
+                                detail: '비동기 처리 적용으로 TTFB를 14.71초에서 0.03초로, LCP를 15.7초에서 0.7초로 개선했습니다.',
                             },
                             {
                                 heading: 'DB 부하 및 락 대기 감소',
