@@ -36,7 +36,7 @@
                 <div class="info-item">
                     <span class="item-title">기술 스택</span>
                     <div>
-                        <img v-for="stack in data.stacks" :key="stack.title" :src="stack.url" :alt="stack.title" :title="stack.title" />
+                        <img v-for="skill in data.skills" :key="skill.title" :src="skill.url" :alt="skill.title" :title="skill.title" />
                     </div>
                 </div>
             </div>

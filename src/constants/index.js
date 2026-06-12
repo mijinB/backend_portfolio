@@ -1,37 +1,44 @@
-import JavaImg from '@/assets/images/stack/Java.png'
-import SpringBootImg from '@/assets/images/stack/SpringBoot.png'
-import PythonImg from '@/assets/images/stack/Python.png'
-import DjangoImg from '@/assets/images/stack/Django.png'
-import MyBatisImg from '@/assets/images/stack/MyBatis.png'
-import JSPImg from '@/assets/images/stack/JSP.png'
-import MySQLImg from '@/assets/images/stack/MySQL.png'
-import AWSImg from '@/assets/images/stack/AWS.png'
-import VueImg from '@/assets/images/stack/Vue.png'
-import ReactImg from '@/assets/images/stack/React.png'
-import ViteImg from '@/assets/images/stack/Vite.png'
-import JavaScriptImg from '@/assets/images/stack/JavaScript.png'
-import TypeScriptImg from '@/assets/images/stack/TypeScript.png'
-import HTML5Img from '@/assets/images/stack/HTML5.png'
-import CSS3Img from '@/assets/images/stack/CSS3.png'
-import jQueryImg from '@/assets/images/stack/jQuery.png'
-import GitImg from '@/assets/images/stack/Git.png'
-import GitHubImg from '@/assets/images/stack/GitHub.png'
-import IntelliJImg from '@/assets/images/stack/IntelliJ.png'
-import VSCodeImg from '@/assets/images/stack/VSCode.png'
-import EclipseImg from '@/assets/images/stack/Eclipse.png'
-import JPAImg from '@/assets/images/stack/JPA.png'
-import SwaggerImg from '@/assets/images/stack/Swagger.png'
-import SQLiteImg from '@/assets/images/stack/SQLite.png'
-import BeautifulSoupImg from '@/assets/images/stack/BeautifulSoup.png'
+import { markRaw } from 'vue'
 
-import NoteIcon from '@/assets/icons/note.svg'
+import JavaImg from '@/assets/images/skills/Java.png'
+import SpringBootImg from '@/assets/images/skills/SpringBoot.png'
+import JSPImg from '@/assets/images/skills/JSP.png'
+import MyBatisImg from '@/assets/images/skills/MyBatis.png'
+import JPAImg from '@/assets/images/skills/JPA.png'
+import PythonImg from '@/assets/images/skills/Python.png'
+import DjangoImg from '@/assets/images/skills/Django.png'
+import JsonImg from '@/assets/images/skills/Json.png'
+import SwaggerUIImg from '@/assets/images/skills/SwaggerUI.png'
+import MySQLImg from '@/assets/images/skills/MySQL.png'
+import MariaDBImg from '@/assets/images/skills/MariaDB.png'
+import VueImg from '@/assets/images/skills/Vue.png'
+import ReactImg from '@/assets/images/skills/React.png'
+import ViteImg from '@/assets/images/skills/Vite.png'
+import JavaScriptImg from '@/assets/images/skills/JavaScript.png'
+import TypeScriptImg from '@/assets/images/skills/TypeScript.png'
+import HTML5Img from '@/assets/images/skills/HTML5.png'
+import CSS3Img from '@/assets/images/skills/CSS3.png'
+import jQueryImg from '@/assets/images/skills/jQuery.png'
+import AWSImg from '@/assets/images/skills/AWS.png'
+import DBeaverImg from '@/assets/images/skills/DBeaver.png'
+import HeidiSQLImg from '@/assets/images/skills/HeidiSQL.png'
+import GitImg from '@/assets/images/skills/Git.png'
+import GitHubImg from '@/assets/images/skills/GitHub.png'
+import IntelliJImg from '@/assets/images/skills/IntelliJ.png'
+import VSCodeImg from '@/assets/images/skills/VSCode.png'
+import EclipseImg from '@/assets/images/skills/Eclipse.png'
+import PostmanImg from '@/assets/images/skills/Postman.png'
+import NotionImg from '@/assets/images/skills/Notion.png'
+import SQLiteImg from '@/assets/images/skills/SQLite.png'
+import BeautifulSoupImg from '@/assets/images/skills/BeautifulSoup.png'
+
 import PlaneIcon from '@/assets/icons/plane.svg'
 import MonitorIcon from '@/assets/icons/monitor.svg'
 import CatIcon from '@/assets/icons/cat.svg'
 
-export const STACK_CATEGORIES = ['ALL', 'BACKEND', 'DB & INFRA', 'FRONTEND', 'TOOLS']
+export const SKILL_CATEGORIES = ['ALL', 'BACKEND', 'DATABASE', 'FRONTEND', 'TOOLS & INFRA']
 
-export const STACK_LOGOS = [
+export const SKILL_LOGOS = [
     {
         title: 'Java',
         url: JavaImg,
@@ -43,13 +50,18 @@ export const STACK_LOGOS = [
         type: 'BACKEND',
     },
     {
+        title: 'JSP',
+        url: JSPImg,
+        type: 'BACKEND',
+    },
+    {
         title: 'MyBatis',
         url: MyBatisImg,
         type: 'BACKEND',
     },
     {
-        title: 'JSP',
-        url: JSPImg,
+        title: 'JPA',
+        url: JPAImg,
         type: 'BACKEND',
     },
     {
@@ -63,14 +75,24 @@ export const STACK_LOGOS = [
         type: 'BACKEND',
     },
     {
-        title: 'MySQL',
-        url: MySQLImg,
-        type: 'DB & INFRA',
+        title: 'RESTful API(JSON)',
+        url: JsonImg,
+        type: 'BACKEND',
     },
     {
-        title: 'AWS',
-        url: AWSImg,
-        type: 'DB & INFRA',
+        title: 'SwaggerUI',
+        url: SwaggerUIImg,
+        type: 'BACKEND',
+    },
+    {
+        title: 'MySQL',
+        url: MySQLImg,
+        type: 'DATABASE',
+    },
+    {
+        title: 'MariaDB',
+        url: MariaDBImg,
+        type: 'DATABASE',
     },
     {
         title: 'Vue',
@@ -88,7 +110,7 @@ export const STACK_LOGOS = [
         type: 'FRONTEND',
     },
     {
-        title: 'JavaScript',
+        title: 'JavaScript(ES6+)',
         url: JavaScriptImg,
         type: 'FRONTEND',
     },
@@ -113,29 +135,54 @@ export const STACK_LOGOS = [
         type: 'FRONTEND',
     },
     {
+        title: 'AWS(EC2, S3, CloudFront)',
+        url: AWSImg,
+        type: 'TOOLS & INFRA',
+    },
+    {
+        title: 'DBeaver',
+        url: DBeaverImg,
+        type: 'TOOLS & INFRA',
+    },
+    {
+        title: 'HeidiSQL',
+        url: HeidiSQLImg,
+        type: 'TOOLS & INFRA',
+    },
+    {
         title: 'Git',
         url: GitImg,
-        type: 'TOOLS',
+        type: 'TOOLS & INFRA',
     },
     {
         title: 'GitHub',
         url: GitHubImg,
-        type: 'TOOLS',
+        type: 'TOOLS & INFRA',
     },
     {
         title: 'IntelliJ',
         url: IntelliJImg,
-        type: 'TOOLS',
+        type: 'TOOLS & INFRA',
     },
     {
         title: 'VSCode',
         url: VSCodeImg,
-        type: 'TOOLS',
+        type: 'TOOLS & INFRA',
     },
     {
         title: 'Eclipse',
         url: EclipseImg,
-        type: 'TOOLS',
+        type: 'TOOLS & INFRA',
+    },
+    {
+        title: 'Postman',
+        url: PostmanImg,
+        type: 'TOOLS & INFRA',
+    },
+    {
+        title: 'Notion',
+        url: NotionImg,
+        type: 'TOOLS & INFRA',
     },
 ]
 
@@ -145,7 +192,7 @@ export const WORK_EXPERIENCE = [
         date: '2023.11. - 현재',
         company: '제이티통신(아이알리미)',
         brief: '국내 1위 자녀 안심망 서비스 (누적 가입자 170만 명)',
-        stacks: ['Backend & DB: Java, Spring Boot, MyBatis, JSP, MySQL, AWS', 'Frontend: Vue, Vite, JavaScript, jQuery, HTML5, CSS3', 'Tools: Git, GitHub, IntelliJ, VSCode, Eclipse'],
+        skills: ['Backend & DB: Java, Spring Boot, MyBatis, JSP, MySQL, MariaDB, AWS(S3, CloudFront)', 'Frontend: Vue, Vite, JavaScript, jQuery, HTML5, CSS3', 'Tools: DBeaver, HeidiSQL, Git, GitHub, IntelliJ, VSCode, Eclipse'],
         detail: [
             {
                 mainTitle: '1. 비즈니스 로직 설계 및 운영 자동화',
@@ -185,7 +232,7 @@ export const WORK_EXPERIENCE = [
                                 detail: '반복 조회와 불필요한 잠금 구조를 개선해 테이블 락 대기와 응답 지연 현상을 완화했습니다.',
                             },
                         ],
-                        stacks: 'Java / Spring Boot / SQL / MyBatis',
+                        skills: 'Java / Spring Boot / SQL / MyBatis',
                     },
                     {
                         period: '2024.07. - 현재',
@@ -218,7 +265,7 @@ export const WORK_EXPERIENCE = [
                                 detail: '사용자 자가 처리 기능과 자동화 도구를 통해 상담 및 운영 리드타임을 단축했습니다.',
                             },
                         ],
-                        stacks: 'Java / Spring Boot / SQL / MyBatis / AWS / JSP / JavaScript / jQuery / HTML / CSS',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / AWS / JSP / JavaScript / jQuery / HTML / CSS',
                     },
                     {
                         period: '2025.02. - 현재',
@@ -247,7 +294,7 @@ export const WORK_EXPERIENCE = [
                                 detail: '관리 기준을 표준화해 검색, 필터링, 서비스 간 연동의 신뢰도를 높였습니다.',
                             },
                         ],
-                        stacks: 'Java / Spring Boot / SQL / MyBatis / JSP / Vue.js / JavaScript / jQuery / HTML / CSS',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / Vue.js / JavaScript / jQuery / HTML / CSS',
                     },
                     {
                         period: '2025.09. - 2026.02.',
@@ -276,7 +323,7 @@ export const WORK_EXPERIENCE = [
                                 detail: '수기 판단과 접수 과정에서 발생할 수 있는 입력 오류와 처리 누락을 줄였습니다.',
                             },
                         ],
-                        stacks: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery / HTML / CSS',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery / HTML / CSS',
                     },
                     {
                         period: '2024.10. - 2026.01.',
@@ -305,7 +352,7 @@ export const WORK_EXPERIENCE = [
                                 detail: '데이터 자동 바인딩을 통해 오기입과 재발급 요청을 줄였습니다.',
                             },
                         ],
-                        stacks: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery / HTML / CSS',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery / HTML / CSS',
                     },
                     {
                         period: '2026.03. - 2026.04.',
@@ -330,7 +377,7 @@ export const WORK_EXPERIENCE = [
                                 detail: '운영 정책과 예외 상황을 반영한 조회 기능을 구축해 단말기 문의 대응의 정확도를 높였습니다.',
                             },
                         ],
-                        stacks: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery / HTML / CSS',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery / HTML / CSS',
                     },
                     {
                         period: '2026.03.',
@@ -355,7 +402,7 @@ export const WORK_EXPERIENCE = [
                                 detail: '신규 서비스 추가 시에도 기존 운영사이트 안에서 통합 관리가 가능하도록 기반을 마련했습니다.',
                             },
                         ],
-                        stacks: 'Java / Spring Boot / SQL / MyBatis / Database / JSP / JavaScript / jQuery / HTML / CSS',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / Database / JSP / JavaScript / jQuery / HTML / CSS',
                     },
                     {
                         period: '2024.02. - 2024.06.',
@@ -384,7 +431,7 @@ export const WORK_EXPERIENCE = [
                                 detail: '세션 유지 및 데이터 보호 로직을 적용해 운영 중 단절 이슈를 줄이고 서비스 신뢰도를 높였습니다.',
                             },
                         ],
-                        stacks: 'Vue.js / JavaScript / HTML / CSS',
+                        skills: 'Vue.js / JavaScript / HTML / CSS',
                     },
                     {
                         period: '2023.11. - 2024.02.',
@@ -413,7 +460,7 @@ export const WORK_EXPERIENCE = [
                                 detail: '빌드 환경과 리소스 관리 구조를 정비해 이후 운영 및 개선 작업의 생산성을 높였습니다.',
                             },
                         ],
-                        stacks: 'Java / Spring Boot / SQL / MyBatis / Vue.js / JavaScript / HTML / CSS',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / Vue.js / JavaScript / HTML / CSS',
                     },
                 ],
             },
@@ -427,7 +474,7 @@ export const SIDE_PROJECTS = [
         status: 'past',
         date: '2025.12.',
         title: 'Shopify 글로벌 커머스 테마 커스터마이징 및 섹션 개발)',
-        stacks: ['Platform: Shopify Online Store 2.0', 'Languages: Liquid, JavaScript, HTML/CSS', 'Tools: Shopify CLI, Theme Library Management'],
+        skills: ['Platform: Shopify Online Store 2.0', 'Languages: Liquid, JavaScript, HTML/CSS', 'Tools: Shopify CLI, Theme Library Management'],
         detail: [
             'Shopify Online Store 2.0 및 Liquid 엔진 기반의 네이티브 개발 방식을 적용하여 기존 테마와 100% 호환되는 고도화된 커스텀 섹션 구현',
             '이미지, 텍스트(색상/크기/정렬), 버튼 스타일(호버 효과 포함) 등 섹션의 모든 요소를 Shopify Admin UI에서 제어 가능하도록 매핑하여 운영자의 관리 자율성 확보',
@@ -441,7 +488,7 @@ export const SIDE_PROJECTS = [
         status: 'past',
         date: '2025.11.',
         title: '전문 노무법인 공식 웹사이트 반응형 프론트엔드 개발',
-        stacks: ['Skills: React, Vite, Tailwind CSS, JavaScript', 'Tools: GitHub (README), ESLint, Prettier'],
+        skills: ['Skills: React, Vite, Tailwind CSS, JavaScript', 'Tools: GitHub (README), ESLint, Prettier'],
         detail: [
             'React와 Vite를 활용한 개발 환경에서 Tailwind CSS의 중단점 시스템을 적용하여 기기별 최적화된 반응형 UI 구현',
             'UI 요소를 독립적인 React 컴포넌트 단위로 설계하여 반복되는 디자인의 재사용성을 높이고 유지보수 효율성을 극대화한 아키텍처 구축',
@@ -453,10 +500,10 @@ export const SIDE_PROJECTS = [
 
 export const PROJECTS = [
     {
-        icon: NoteIcon,
+        icon: CatIcon,
         title: 'PlanPad (플랜패드)',
         desc: '개인 맞춤형 일정 관리와 태그 기반 메모를 제공하는 웹 애플리케이션',
-        stacks: [
+        skills: [
             {
                 title: 'Java',
                 url: JavaImg,
@@ -474,16 +521,16 @@ export const PROJECTS = [
                 url: MySQLImg,
             },
             {
-                title: 'AWS',
+                title: 'AWS(EC2)',
                 url: AWSImg,
             },
             {
-                title: 'Swagger',
-                url: SwaggerImg,
+                title: 'SwaggerUI',
+                url: SwaggerUIImg,
             },
         ],
         detail: {
-            icon: NoteIcon,
+            icon: markRaw(CatIcon),
             title: 'PlanPad (플랜패드)',
             desc: '개인 맞춤형 일정 관리와 태그 기반 메모를 제공하는 웹 애플리케이션',
             teamSize: '2명',
@@ -494,7 +541,7 @@ export const PROJECTS = [
                     txt: 'GitHub Repository',
                 },
             ],
-            stacks: [
+            skills: [
                 {
                     title: 'Java',
                     url: JavaImg,
@@ -512,12 +559,12 @@ export const PROJECTS = [
                     url: MySQLImg,
                 },
                 {
-                    title: 'AWS',
+                    title: 'AWS(EC2)',
                     url: AWSImg,
                 },
                 {
-                    title: 'Swagger',
-                    url: SwaggerImg,
+                    title: 'SwaggerUI',
+                    url: SwaggerUIImg,
                 },
             ],
             details: [
@@ -541,7 +588,7 @@ export const PROJECTS = [
                     heading: '3. 일관된 인터페이스 제공 및 협업 도구 활용',
                     txt: [
                         '@RestControllerAdvice를 활용하여 모든 에러 응답을 일관된 JSON 형식으로 반환, 프론트엔드 개발자가 예측 가능하도록 에러 처리 지원',
-                        'Swagger(OpenAPI 3.0)를 도입하여 프론트엔드 개발자와의 커뮤니케이션 비용 절감, 실시간 API 테스트 환경 제공',
+                        'SwaggerUI(OpenAPI 3.0)를 도입하여 프론트엔드 개발자와의 커뮤니케이션 비용 절감, 실시간 API 테스트 환경 제공',
                     ],
                 },
                 {
@@ -555,7 +602,7 @@ export const PROJECTS = [
         icon: PlaneIcon,
         title: 'Airbnb-Clone Service',
         desc: 'Django와 React로 구현한 숙소 예약 및 커뮤니티 플랫폼',
-        stacks: [
+        skills: [
             {
                 title: 'Python',
                 url: PythonImg,
@@ -574,7 +621,7 @@ export const PROJECTS = [
             },
         ],
         detail: {
-            icon: PlaneIcon,
+            icon: markRaw(PlaneIcon),
             title: 'Airbnb-Clone Service',
             desc: 'Django와 React로 구현한 숙소 예약 및 커뮤니티 플랫폼',
             teamSize: '1명',
@@ -589,7 +636,7 @@ export const PROJECTS = [
                     txt: 'GitHub Repository (Frontend)',
                 },
             ],
-            stacks: [
+            skills: [
                 {
                     title: 'Python',
                     url: PythonImg,
@@ -636,7 +683,7 @@ export const PROJECTS = [
         icon: MonitorIcon,
         title: 'Web Scraper & Flask Server',
         desc: '다중 채용 플랫폼의 채용 공고를 실시간 수집·정제해 제공하는 구직 정보 아카이빙 플랫폼',
-        stacks: [
+        skills: [
             {
                 title: 'Python',
                 url: PythonImg,
@@ -647,7 +694,7 @@ export const PROJECTS = [
             },
         ],
         detail: {
-            icon: MonitorIcon,
+            icon: markRaw(MonitorIcon),
             title: 'Web Scraper & Flask Server',
             desc: '다중 채용 플랫폼의 채용 공고를 실시간 수집·정제해 제공하는 구직 정보 아카이빙 플랫폼',
             teamSize: '1명',
@@ -658,7 +705,7 @@ export const PROJECTS = [
                     txt: 'GitHub Repository',
                 },
             ],
-            stacks: [
+            skills: [
                 {
                     title: 'Python',
                     url: PythonImg,

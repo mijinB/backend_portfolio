@@ -12,7 +12,7 @@
                 </div>
                 <div class="info-item">
                     <div class="info-side">
-                        <StarIcon class="icon status-icon" />
+                        <StarIcon class="icon status-icon active" />
                         <span class="date">{{ EDUCATION.date }}</span>
                     </div>
                     <div class="info-content">
@@ -28,7 +28,7 @@
                     <li v-for="cert in CERTIFICATIONS" :key="cert.name">
                         <div class="info-item">
                             <div class="info-side">
-                                <StarIcon class="icon status-icon" :class="{ active: cert.status === 'active' }" />
+                                <StarIcon class="icon status-icon active" />
                                 <span class="date">{{ cert.date }}</span>
                             </div>
                             <div class="info-content">
@@ -54,6 +54,11 @@ import StarIcon from '@/assets/icons/star.svg'
 }
 .info-item .info-content {
     width: 25rem;
+}
+
+.status-icon.active {
+    stroke: var(--point-color);
+    filter: drop-shadow(0 0 5px rgba(74, 222, 128, 0.5));
 }
 
 ul {

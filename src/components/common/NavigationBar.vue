@@ -6,8 +6,8 @@
                 <a href="#"></a>
                 <a href="#"></a>
             </li>
-            <li :class="{ active: activeSection === 'stack' }">
-                <a href="#stack" @click.prevent="handleNavClick('stack')">STACK</a>
+            <li :class="{ active: activeSection === 'skills' }">
+                <a href="#skills" @click.prevent="handleNavClick('skills')">SKILLS</a>
             </li>
             <li :class="{ active: activeSection === 'work' }">
                 <a href="#work" @click.prevent="handleNavClick('work')">WORK</a>

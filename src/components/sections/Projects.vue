@@ -15,8 +15,8 @@
                         </div>
                         <p class="desc">{{ proj.desc }}</p>
                     </div>
-                    <div class="stack-wrap">
-                        <img v-for="stack in proj.stacks" :key="stack.title" :src="stack.url" :alt="stack.title" :title="stack.title" />
+                    <div class="skills-wrap">
+                        <img v-for="skill in proj.skills" :key="skill.title" :src="skill.url" :alt="skill.title" :title="skill.title" />
                     </div>
                 </li>
             </ul>
@@ -104,7 +104,7 @@ ul li.project-card:active {
     word-break: keep-all;
 }
 
-.stack-wrap {
+.skills-wrap {
     display: flex;
     flex-wrap: wrap;
     gap: 0.55rem;
@@ -113,7 +113,7 @@ ul li.project-card:active {
     border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.stack-wrap img {
+.skills-wrap img {
     width: 2rem;
     height: 2rem;
     padding: 0.26rem;

@@ -20,7 +20,7 @@
                             <span class="content-title">{{ work.company }}</span>
                             <p class="content-subtitle">{{ work.brief }}</p>
                             <div class="info-card">
-                                <span v-for="stack in work.stacks" :key="stack">{{ stack }}</span>
+                                <span v-for="skill in work.skills" :key="skill">{{ skill }}</span>
                             </div>
                             <button class="content-action" @click="openDetail(work.detail)">
                                 <OpenIcon class="icon open-icon" />
@@ -42,8 +42,8 @@
                             </div>
                             <div class="info-content">
                                 <span class="content-title">{{ proj.title }}</span>
-                                <div class="stack-wrap">
-                                    <span v-for="stack in proj.stacks" :key="stack">{{ stack }}</span>
+                                <div class="skills-wrap">
+                                    <span v-for="skill in proj.skills" :key="skill">{{ skill }}</span>
                                 </div>
                                 <button class="content-action" @click="toggleDetail(proj.id)">
                                     <ChevronIcon class="icon chevron-icon" :class="{ 'is-rotated': activeDetailId === proj.id }" />
@@ -96,7 +96,7 @@ const toggleDetail = (id) => {
     color: var(--point-color);
     font-size: 0.9rem;
 }
-.stack-wrap {
+.skills-wrap {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;

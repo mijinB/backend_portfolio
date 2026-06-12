@@ -33,9 +33,9 @@
                         </ul>
                     </div>
 
-                    <div class="stack-box">
-                        <span class="box-label stack-label">사용 기술</span>
-                        <p class="stack-text">{{ project.stacks }}</p>
+                    <div class="skills-box">
+                        <span class="box-label skills-label">사용 기술</span>
+                        <p class="skills-text">{{ project.skills }}</p>
                     </div>
                 </div>
             </div>
@@ -125,15 +125,15 @@ h3 {
     line-height: 1.65;
 }
 
-.project-card .stack-box {
+.project-card .skills-box {
     margin-top: 0.2rem;
 }
-.project-card .stack-box .stack-label {
+.project-card .skills-box .skills-label {
     border-color: rgba(96, 165, 250, 0.22);
     background: linear-gradient(135deg, rgba(96, 165, 250, 0.12), rgba(45, 212, 191, 0.08));
     color: var(--sub-point-color);
 }
-.project-card .stack-box .stack-text {
+.project-card .skills-box .skills-text {
     color: var(--text-color);
     font-size: 0.82rem;
     line-height: 1.7;
