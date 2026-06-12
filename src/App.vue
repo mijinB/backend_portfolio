@@ -2,7 +2,7 @@
 import Hero from './components/sections/Hero.vue'
 import NavigationBar from './components/common/NavigationBar.vue'
 import Skills from './components/sections/Skills.vue'
-import Work from './components/sections/Work.vue'
+import Experience from './components/sections/Experience.vue'
 import Projects from './components/sections/Projects.vue'
 import Credentials from './components/sections/Credentials.vue'
 import Contacts from './components/sections/Contacts.vue'
@@ -12,7 +12,7 @@ import Contacts from './components/sections/Contacts.vue'
     <Hero />
     <NavigationBar />
     <Skills />
-    <Work />
+    <Experience />
     <Projects />
     <Credentials />
     <Contacts />

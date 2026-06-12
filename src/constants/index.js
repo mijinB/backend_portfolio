@@ -192,10 +192,33 @@ export const WORK_EXPERIENCE = [
         date: '2023.11. - 현재',
         company: '제이티통신(아이알리미)',
         brief: '국내 1위 자녀 안심망 서비스 (누적 가입자 170만 명)',
+        role: 'Frontend · Backend Developer',
         skills: ['Backend & DB: Java, Spring Boot, MyBatis, JSP, MySQL, MariaDB, AWS(S3, CloudFront)', 'Frontend: Vue, Vite, JavaScript, jQuery, HTML5, CSS3', 'Tools: DBeaver, HeidiSQL, Git, GitHub, IntelliJ, VSCode, Eclipse'],
+        keyAchievements: [
+            {
+                heading: '- 주요 운영 대시보드 TTFB 약 70% 개선',
+                detail: '통계성 조회 쿼리의 중복 호출 제거, GROUP BY 기반 통합, 상관 서브쿼리 개선을 통해 운영 환경 기준 TTFB를 3.01초에서 0.89초 수준으로 개선했습니다.',
+            },
+            {
+                heading: '- 반복 CS 및 수기 운영 업무 자동화',
+                detail: '반복적으로 유입되는 CS 문의 유형을 분석해 표준 답변 자동화, 사용자 자가 처리 기능, 재발급 자동 검증 기능으로 전환했습니다.',
+            },
+            {
+                heading: '- 신학기 임시 운영 인력 약 50% 절감 기여',
+                detail: '매년 신학기 3~4월마다 10명 이상 투입되던 임시 운영 인력이 약 5명 수준으로 줄어드는 데 기여했습니다.',
+            },
+            {
+                heading: '- 서류 발급 자동화 기능 구축 및 확장',
+                detail: 'PDF/HWP 기반 서류 다운로드 자동화 기능을 구축하고, 운영팀이 직접 양식을 관리할 수 있는 구조로 개선했습니다. 이후 현업 활용도가 높아져 다른 서비스로 확장 적용했습니다.',
+            },
+            {
+                heading: '- 데이터 정합성 및 운영 안정성 강화',
+                detail: '서버 사이드 이중 검증, S3-DB 예외 처리, 불필요한 FOR UPDATE 제거, CMS/API/DB 표준화를 통해 데이터 신뢰도와 운영 안정성을 높였습니다.',
+            },
+        ],
         detail: [
             {
-                mainTitle: '1. 비즈니스 로직 설계 및 운영 자동화',
+                mainTitle: '1. 백엔드 성능 개선 및 안정성 강화',
                 subProjects: [
                     {
                         period: '2026.02. - 2026.04.',
@@ -203,36 +226,38 @@ export const WORK_EXPERIENCE = [
                         tasks: [
                             {
                                 heading: '통계성 조회 쿼리 성능 개선',
-                                detail: '중복 통계 조회 제거, GROUP BY 기반 쿼리 통합, 상관 서브쿼리 제거를 통해 대시보드 응답 성능을 개선했습니다.',
+                                detail:
+                                    '기관 코드별로 반복 호출되던 동일 통계 조회 쿼리를 GROUP BY 기반 단일 집계 쿼리로 통합해 불필요한 DB 호출을 줄였습니다.',
                             },
                             {
-                                heading: '집계 쿼리 구조 최적화',
-                                detail: 'NOT EXISTS 기반 반복 검사와 중복 스캔 구조를 CTE, LEFT JOIN, CASE WHEN 방식으로 재구성해 DB 부하를 줄였습니다.',
+                                heading: '상관 서브쿼리 및 중복 스캔 구조 개선',
+                                detail:
+                                    '학교별 최신 일정 조회 로직의 상관 서브쿼리를 파생 테이블 기반 구조로 변경하고, NOT EXISTS 기반 반복 검사를 CTE, LEFT JOIN, CASE WHEN 방식으로 재구성했습니다.',
                             },
                             {
                                 heading: 'DB 락 경합 완화',
-                                detail: 'INSERT ... SELECT, UPDATE ... JOIN 등 락 유발 가능성이 높은 쿼리를 분석하고 일부 고위험 구간을 개선했습니다.',
+                                detail:
+                                    'INSERT ... SELECT, UPDATE ... JOIN 등 락 유발 가능성이 높은 쿼리를 분석하고, 불필요한 FOR UPDATE 사용을 제거해 잠금 점유를 완화했습니다.',
                             },
                             {
-                                heading: '동시성 제어 방식 개선',
-                                detail: '중복 요청 차단 UI를 적용하고 불필요한 FOR UPDATE 사용을 제거해 잠금 점유를 완화했습니다.',
+                                heading: '측정 기반 성능 개선',
+                                detail:
+                                    'Chrome Network, Lighthouse, Performance, Datadog RUM 지표를 활용해 개선 전후 성능을 정량적으로 비교했습니다.',
                             },
                         ],
                         achievements: [
                             {
                                 heading: '대시보드 응답 속도 개선',
-                                detail: '운영 환경 기준 TTFB를 3.01초에서 0.89초로, LCP를 3.8초에서 1.7초 수준으로 개선했습니다.',
+                                detail:
+                                    '운영 환경 기준 TTFB를 3.01초에서 0.89초로, LCP를 3.8초에서 1.7초 수준으로 개선했습니다.',
                             },
                             {
-                                heading: '메시지전송 화면 응답 속도 개선',
-                                detail: '비동기 처리 적용으로 TTFB를 14.71초에서 0.03초로, LCP를 15.7초에서 0.7초로 개선했습니다.',
-                            },
-                            {
-                                heading: 'DB 부하 및 락 대기 감소',
-                                detail: '반복 조회와 불필요한 잠금 구조를 개선해 테이블 락 대기와 응답 지연 현상을 완화했습니다.',
+                                heading: 'DB 부하 및 락 대기 완화',
+                                detail:
+                                    '반복 조회, 중복 스캔, 불필요한 잠금 구조를 개선해 테이블 락 대기와 응답 지연 현상을 완화했습니다.',
                             },
                         ],
-                        skills: 'Java / Spring Boot / SQL / MyBatis',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / MySQL',
                     },
                     {
                         period: '2024.07. - 현재',
@@ -240,90 +265,77 @@ export const WORK_EXPERIENCE = [
                         tasks: [
                             {
                                 heading: '서버 사이드 방어 로직 구축',
-                                detail: '최종 처리 직전 DB 상태를 재검증하는 이중 검증 로직을 적용해 상태 불일치로 인한 부정 수정과 레이스 컨디션을 방지했습니다.',
+                                detail:
+                                    '최종 처리 직전 DB 상태를 재검증하는 이중 검증 로직을 적용해 상태 불일치로 인한 부정 수정과 레이스 컨디션을 방지했습니다.',
                             },
                             {
                                 heading: '분산 리소스 트랜잭션 정합성 확보',
-                                detail: 'AWS S3 파일 삭제 실패가 DB 트랜잭션에 반영되지 않던 문제를 명시적 예외 처리로 개선했습니다.',
+                                detail:
+                                    'AWS S3 파일 삭제 실패가 DB 트랜잭션에 반영되지 않던 문제를 명시적 예외 처리로 개선했습니다.',
                             },
                             {
                                 heading: '파일 처리 로직 공통 모듈화',
-                                detail: '파편화된 업로드·수정 로직을 공통 모듈로 분리해 재사용성과 유지보수성을 높였습니다.',
+                                detail:
+                                    '파편화된 업로드·수정 로직을 공통 모듈로 분리해 재사용성과 유지보수성을 높였습니다.',
                             },
                             {
                                 heading: '민원 답변 자동화 기능 구축',
-                                detail: '표준 답변 데이터를 연동해 반복 민원에 빠르게 대응할 수 있는 자동 답변 기능을 구현했습니다.',
+                                detail:
+                                    '3단 계층형 카테고리와 연동된 표준 답변 데이터를 호출해 반복 민원에 빠르게 대응할 수 있는 자동 답변 기능을 구현했습니다.',
                             },
                         ],
                         achievements: [
                             {
                                 heading: '데이터 무결성 강화',
-                                detail: '서버 사이드 검증 강화를 통해 비정상 데이터 변경과 리소스 불일치 리스크를 줄였습니다.',
+                                detail:
+                                    '서버 사이드 검증 강화를 통해 비정상 데이터 변경과 리소스 불일치 리스크를 줄였습니다.',
                             },
                             {
-                                heading: '운영 공수 절감',
-                                detail: '사용자 자가 처리 기능과 자동화 도구를 통해 상담 및 운영 리드타임을 단축했습니다.',
+                                heading: '운영 리드타임 단축',
+                                detail:
+                                    '사용자 자가 처리 기능과 자동화 도구를 통해 상담 및 운영 처리 공수를 줄였습니다.',
                             },
                         ],
-                        skills: 'Java / Spring Boot / SQL / MyBatis / AWS / JSP / JavaScript / jQuery / HTML / CSS',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / AWS S3 / JSP / JavaScript / jQuery',
                     },
-                    {
-                        period: '2025.02. - 현재',
-                        subTitle: '전사 운영 관리 시스템(CMS) 고도화 및 API 표준화',
-                        tasks: [
-                            {
-                                heading: '운영 데이터 관리 시스템화',
-                                detail: '하드코딩으로 관리되던 약관, FAQ, 공지사항 일부 영역을 CMS에서 직접 관리할 수 있도록 개편했습니다.',
-                            },
-                            {
-                                heading: 'DB 스키마 및 API 표준화',
-                                detail: '여러 서비스가 동일한 인터페이스로 사용할 수 있도록 DB 구조와 API 호출 체계를 표준화했습니다.',
-                            },
-                            {
-                                heading: '데이터 코드화 및 마이그레이션',
-                                detail: '혼용되던 단말기 관련 데이터를 코드 체계로 정비하고 기존 데이터를 일괄 마이그레이션했습니다.',
-                            },
-                        ],
-                        achievements: [
-                            {
-                                heading: '운영 자율성 확보',
-                                detail: '운영팀이 개발자 개입 없이 주요 운영 데이터를 직접 관리할 수 있는 환경을 구축했습니다.',
-                            },
-                            {
-                                heading: '데이터 일관성 향상',
-                                detail: '관리 기준을 표준화해 검색, 필터링, 서비스 간 연동의 신뢰도를 높였습니다.',
-                            },
-                        ],
-                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / Vue.js / JavaScript / jQuery / HTML / CSS',
-                    },
+                ],
+            },
+            {
+                mainTitle: '2. 운영 자동화 및 CS 업무 효율화',
+                subProjects: [
                     {
                         period: '2025.09. - 2026.02.',
                         subTitle: '전자출결 단말기 재발급 프로세스 자동화',
                         tasks: [
                             {
                                 heading: '재발급 자동 검증 로직 개발',
-                                detail: '시스템 데이터를 기반으로 사용자가 재발급 가능 여부를 실시간으로 확인할 수 있는 자동 검증 로직을 구현했습니다.',
+                                detail:
+                                    '시스템 데이터를 기반으로 사용자가 재발급 가능 여부를 실시간으로 확인할 수 있는 자동 검증 로직을 구현했습니다.',
                             },
                             {
                                 heading: '예외 사유 안내 처리',
-                                detail: '재발급 불가 사유를 명확히 안내해 불필요한 CS 문의를 줄일 수 있도록 했습니다.',
+                                detail:
+                                    '재발급이 불가능한 경우 단순 실패 처리 대신 명확한 사유를 안내해 불필요한 CS 문의를 줄였습니다.',
                             },
                             {
                                 heading: '운영 전달 프로세스 자동화',
-                                detail: '검증 완료 건이 운영 배송 단계로 바로 이어지도록 처리 흐름을 설계했습니다.',
+                                detail:
+                                    '검증 완료 건이 운영 배송 단계로 바로 이어지도록 처리 흐름을 설계했습니다.',
                             },
                         ],
                         achievements: [
                             {
                                 heading: '수동 검토 공정 축소',
-                                detail: '적격성 검토 과정 자동화를 통해 신청부터 처리까지의 운영 리드타임을 단축했습니다.',
+                                detail:
+                                    '적격성 검토 과정 자동화를 통해 신청부터 처리까지의 운영 리드타임을 단축했습니다.',
                             },
                             {
                                 heading: '휴먼 에러 감소',
-                                detail: '수기 판단과 접수 과정에서 발생할 수 있는 입력 오류와 처리 누락을 줄였습니다.',
+                                detail:
+                                    '수기 판단과 접수 과정에서 발생할 수 있는 입력 오류와 처리 누락을 줄였습니다.',
                             },
                         ],
-                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery / HTML / CSS',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery',
                     },
                     {
                         period: '2024.10. - 2026.01.',
@@ -331,53 +343,106 @@ export const WORK_EXPERIENCE = [
                         tasks: [
                             {
                                 heading: '동적 문서 생성 로직 구현',
-                                detail: '사용자 입력 데이터를 서식에 바인딩해 견적서 및 증빙 서류를 PDF와 HWP 형식으로 실시간 생성하는 기능을 구현했습니다.',
+                                detail:
+                                    '사용자 입력 데이터를 서식에 바인딩해 견적서 및 증빙 서류를 PDF와 HWP 형식으로 실시간 생성하는 기능을 구현했습니다.',
                             },
                             {
                                 heading: '운영 관리 도구 개발',
-                                detail: '운영팀이 서류 양식을 직접 등록·관리할 수 있는 관리 기능과 스토리지 연동 구조를 구축했습니다.',
+                                detail:
+                                    '운영팀이 서류 양식을 직접 등록·관리할 수 있는 관리 기능과 스토리지 연동 구조를 구축했습니다.',
                             },
                             {
                                 heading: '서비스 확장 적용',
-                                detail: '기존 로직을 모듈화해 다른 서비스에서도 재사용 가능하도록 확장했습니다.',
+                                detail:
+                                    '초기 구축 이후 현업 활용도가 높아져 기존 로직을 모듈화하고 다른 서비스에서도 재사용 가능하도록 확장했습니다.',
                             },
                         ],
                         achievements: [
                             {
                                 heading: '문서 발급 자동화',
-                                detail: '수기 작성 중심이던 서류 발급 과정을 자동화해 처리 시간을 크게 단축했습니다.',
+                                detail:
+                                    '수기 작성 중심이던 서류 발급 과정을 자동화해 처리 시간을 단축하고 오기입 가능성을 줄였습니다.',
                             },
                             {
                                 heading: '운영 정확도 향상',
-                                detail: '데이터 자동 바인딩을 통해 오기입과 재발급 요청을 줄였습니다.',
+                                detail:
+                                    '데이터 자동 바인딩을 통해 오기입과 재발급 요청을 줄였습니다.',
                             },
                         ],
-                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery / HTML / CSS',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / iTextPDF / hwplib / JSP / JavaScript / jQuery',
                     },
                     {
-                        period: '2026.03. - 2026.04.',
-                        subTitle: '분실 단말기 조회 기능 신규 구축',
+                        period: '2025.11. - 2026.01.',
+                        subTitle: '서비스 신청 프로세스 통합 및 레거시 시스템 리팩토링',
                         tasks: [
                             {
-                                heading: '학교 및 단말기 상태 기준 조회 로직 구현',
-                                detail: '학교 소속과 단말기 상태에 따라 학생 정보 노출 여부를 분기 처리하는 조회 기능을 구현했습니다.',
+                                heading: '신청 프로세스 통합',
+                                detail:
+                                    '기존에 분리되어 있던 서비스 연장 신청과 단말기 구매 신청 기능을 단일 흐름으로 통합해 사용자 편의성을 높였습니다.',
                             },
                             {
-                                heading: '운영 예외 케이스 반영',
-                                detail: '돌봄·늘봄교실 단말기, 삭제 단말기 복구 사례 등 실제 운영 상황을 조회 조건에 반영했습니다.',
+                                heading: '데이터 모델링 및 저장 로직 보완',
+                                detail:
+                                    '누락되던 핵심 데이터의 저장 로직을 복구하고, 비즈니스 로직에 필요한 데이터를 통합 관리하도록 개선했습니다.',
                             },
                             {
-                                heading: '입력값 검증 강화',
-                                detail: '카드번호 자릿수 검증과 12자리 입력 시 9자리 기준 조회 로직을 적용해 오입력을 방지했습니다.',
+                                heading: '레거시 화면 구조 정비',
+                                detail:
+                                    '조건 분기문이 많던 공통 JSP 파일을 분리하고, 레거시 JavaScript 코드를 ES6 문법으로 정비했습니다.',
                             },
                         ],
                         achievements: [
                             {
-                                heading: '현장 대응 정확도 향상',
-                                detail: '운영 정책과 예외 상황을 반영한 조회 기능을 구축해 단말기 문의 대응의 정확도를 높였습니다.',
+                                heading: 'CS 업무 자동화 및 민원 감소',
+                                detail:
+                                    '본사 CS팀을 통해서만 가능했던 단말기 재신청을 사용자가 직접 수정할 수 있도록 개선해 신학기 집중 민원 감소에 기여했습니다.',
+                            },
+                            {
+                                heading: '유지보수성 향상',
+                                detail:
+                                    '복잡한 분기 구조와 중복 로직을 정리해 신규 요구사항 반영 시 개발 공수와 오류 가능성을 줄였습니다.',
                             },
                         ],
-                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery / HTML / CSS',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery',
+                    },
+                ],
+            },
+            {
+                mainTitle: '3. 데이터 표준화 및 운영 관리 체계 고도화',
+                subProjects: [
+                    {
+                        period: '2025.02. - 현재',
+                        subTitle: '전사 운영 관리 시스템(CMS) 고도화 및 API 표준화',
+                        tasks: [
+                            {
+                                heading: '운영 데이터 관리 시스템화',
+                                detail:
+                                    '하드코딩으로 관리되던 약관, FAQ, 공지사항 일부 영역을 CMS에서 직접 관리할 수 있도록 개편했습니다.',
+                            },
+                            {
+                                heading: 'DB 스키마 및 API 표준화',
+                                detail:
+                                    '여러 서비스가 동일한 인터페이스로 사용할 수 있도록 DB 구조와 API 호출 체계를 표준화했습니다.',
+                            },
+                            {
+                                heading: '데이터 코드화 및 마이그레이션',
+                                detail:
+                                    '한글/영문이 혼용되던 단말기 관련 데이터를 코드 체계로 정비하고 기존 데이터를 일괄 마이그레이션했습니다.',
+                            },
+                        ],
+                        achievements: [
+                            {
+                                heading: '운영 자율성 확보',
+                                detail:
+                                    '운영팀이 개발자 개입 없이 주요 운영 데이터를 직접 관리할 수 있는 환경을 구축했습니다.',
+                            },
+                            {
+                                heading: '데이터 일관성 향상',
+                                detail:
+                                    '관리 기준을 표준화해 검색, 필터링, 서비스 간 연동의 신뢰도를 높였습니다.',
+                            },
+                        ],
+                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / Vue.js / JavaScript / jQuery',
                     },
                     {
                         period: '2026.03.',
@@ -385,50 +450,88 @@ export const WORK_EXPERIENCE = [
                         tasks: [
                             {
                                 heading: '멀티 서비스 운영 구조 확장',
-                                detail: '기존 단일 서비스 운영 구조를 신규 서비스까지 함께 관리할 수 있도록 확장했습니다.',
+                                detail:
+                                    '기존 단일 서비스 운영 구조를 신규 서비스까지 함께 관리할 수 있도록 확장했습니다.',
                             },
                             {
                                 heading: '서비스별 게시물 관리 기능 구현',
-                                detail: '공지사항과 FAQ에 서비스별 등록, 전체 등록, 서비스별 조회 기능을 추가했습니다.',
+                                detail:
+                                    '공지사항과 FAQ에 서비스별 등록, 전체 등록, 서비스별 조회 기능을 추가했습니다.',
                             },
                             {
                                 heading: '서비스 소속 기준 노출 정책 적용',
-                                detail: '기관별 화면에서 소속 서비스에 해당하는 게시물만 노출되도록 분기 처리했습니다.',
+                                detail:
+                                    '기관별 화면에서 소속 서비스에 해당하는 게시물만 노출되도록 분기 처리했습니다.',
                             },
                         ],
                         achievements: [
                             {
                                 heading: '운영 확장성 확보',
-                                detail: '신규 서비스 추가 시에도 기존 운영사이트 안에서 통합 관리가 가능하도록 기반을 마련했습니다.',
+                                detail:
+                                    '신규 서비스 추가 시에도 기존 운영사이트 안에서 통합 관리가 가능하도록 기반을 마련했습니다.',
                             },
                         ],
-                        skills: 'Java / Spring Boot / SQL / MyBatis / Database / JSP / JavaScript / jQuery / HTML / CSS',
+                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery',
                     },
+                    {
+                        period: '2026.03. - 2026.04.',
+                        subTitle: '분실 단말기 조회 기능 신규 구축',
+                        tasks: [
+                            {
+                                heading: '학교 및 단말기 상태 기준 조회 로직 구현',
+                                detail:
+                                    '학교 소속과 단말기 상태에 따라 학생 정보 노출 여부를 분기 처리하는 조회 기능을 구현했습니다.',
+                            },
+                            {
+                                heading: '운영 예외 케이스 반영',
+                                detail:
+                                    '돌봄·늘봄교실 단말기, 삭제 단말기 복구 사례 등 실제 운영 상황을 조회 조건에 반영했습니다.',
+                            },
+                            {
+                                heading: '입력값 검증 강화',
+                                detail:
+                                    '카드번호 자릿수 검증과 12자리 입력 시 9자리 기준 조회 로직을 적용해 오입력을 방지했습니다.',
+                            },
+                        ],
+                        achievements: [
+                            {
+                                heading: '현장 대응 정확도 향상',
+                                detail:
+                                    '운영 정책과 예외 상황을 반영한 조회 기능을 구축해 단말기 문의 대응의 정확도를 높였습니다.',
+                            },
+                        ],
+                        skills: 'Java / Spring Boot / SQL / MyBatis / JSP / JavaScript / jQuery',
+                    },
+                ],
+            },
+            {
+                mainTitle: '4. 웹 서비스 구축 및 운영 경험',
+                subProjects: [
                     {
                         period: '2024.02. - 2024.06.',
                         subTitle: '교육 플랫폼 운영 관리 및 고객 지원 UI 구축',
                         tasks: [
                             {
                                 heading: '고객 지원 및 운영 관리 화면 구축',
-                                detail: '사용자가 문의를 접수하고 처리 현황을 확인할 수 있는 Helpdesk 화면과 관리자용 운영 화면을 구현했습니다.',
+                                detail:
+                                    '사용자가 문의를 접수하고 처리 현황을 확인할 수 있는 Helpdesk 화면과 관리자용 운영 화면을 구현했습니다.',
                             },
                             {
                                 heading: '민원 현황 조회 및 데이터 바인딩 구현',
-                                detail: '운영자가 민원 현황을 빠르게 확인하고 관리할 수 있도록 조회 화면과 데이터 연동 로직을 개발했습니다.',
+                                detail:
+                                    '운영자가 민원 현황을 빠르게 확인하고 관리할 수 있도록 조회 화면과 데이터 연동 로직을 개발했습니다.',
                             },
                             {
                                 heading: '세션 유지 및 데이터 보호 처리',
-                                detail: '새로고침 시 프로세스가 끊기지 않도록 세션 유지 로직을 적용하고, 개인정보 보호를 위한 암호화 처리를 구현했습니다.',
+                                detail:
+                                    '새로고침 시 프로세스가 끊기지 않도록 세션 유지 로직을 적용하고, 개인정보 보호를 위한 암호화 처리를 구현했습니다.',
                             },
                         ],
                         achievements: [
                             {
                                 heading: '운영 관리 효율 향상',
-                                detail: '관리자 중심의 운영 화면을 구축하여 민원 처리 및 현황 파악의 편의성을 높였습니다.',
-                            },
-                            {
-                                heading: '서비스 안정성 강화',
-                                detail: '세션 유지 및 데이터 보호 로직을 적용해 운영 중 단절 이슈를 줄이고 서비스 신뢰도를 높였습니다.',
+                                detail:
+                                    '관리자 중심의 운영 화면을 구축해 민원 처리와 현황 파악의 편의성을 높였습니다.',
                             },
                         ],
                         skills: 'Vue.js / JavaScript / HTML / CSS',
@@ -439,25 +542,25 @@ export const WORK_EXPERIENCE = [
                         tasks: [
                             {
                                 heading: '공식 홈페이지 리뉴얼',
-                                detail: '최신 웹 트렌드를 반영해 공식 홈페이지의 화면 구조와 사용자 경험을 전면 개편했습니다.',
+                                detail:
+                                    '최신 웹 트렌드를 반영해 공식 홈페이지의 화면 구조와 사용자 경험을 전면 개편했습니다.',
                             },
                             {
                                 heading: '빌드 및 리소스 로딩 환경 개선',
-                                detail: 'Webpack 설정을 정비하고 SVG 로더 및 리소스 로딩 구조를 개선해 운영 및 유지보수 편의성을 높였습니다.',
+                                detail:
+                                    'Webpack 설정을 정비하고 SVG 로더 및 리소스 로딩 구조를 개선해 유지보수 편의성을 높였습니다.',
                             },
                             {
                                 heading: '프론트·백엔드 통합 유지보수',
-                                detail: '런칭 이후 프론트엔드 기능 개선뿐 아니라 백엔드 API 및 DB 관리까지 함께 수행하며 안정적인 운영을 지원했습니다.',
+                                detail:
+                                    '런칭 이후 프론트엔드 기능 개선뿐 아니라 백엔드 API 및 DB 관리까지 함께 수행하며 안정적인 운영을 지원했습니다.',
                             },
                         ],
                         achievements: [
                             {
                                 heading: '운영 안정성 확보',
-                                detail: '프론트와 백엔드를 함께 관리하며 장애 대응과 기능 개선 속도를 높였습니다.',
-                            },
-                            {
-                                heading: '유지보수 효율 향상',
-                                detail: '빌드 환경과 리소스 관리 구조를 정비해 이후 운영 및 개선 작업의 생산성을 높였습니다.',
+                                detail:
+                                    '프론트와 백엔드를 함께 관리하며 장애 대응과 기능 개선 속도를 높였습니다.',
                             },
                         ],
                         skills: 'Java / Spring Boot / SQL / MyBatis / Vue.js / JavaScript / HTML / CSS',

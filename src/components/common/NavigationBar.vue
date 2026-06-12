@@ -9,8 +9,8 @@
             <li :class="{ active: activeSection === 'skills' }">
                 <a href="#skills" @click.prevent="handleNavClick('skills')">SKILLS</a>
             </li>
-            <li :class="{ active: activeSection === 'work' }">
-                <a href="#work" @click.prevent="handleNavClick('work')">WORK</a>
+            <li :class="{ active: activeSection === 'experience' }">
+                <a href="#experience" @click.prevent="handleNavClick('experience')">EXPERIENCE</a>
             </li>
             <li :class="{ active: activeSection === 'projects' }">
                 <a href="#projects" @click.prevent="handleNavClick('projects')">PROJECTS</a>

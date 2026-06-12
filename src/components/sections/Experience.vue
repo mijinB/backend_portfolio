@@ -1,8 +1,8 @@
 <template>
-    <section id="work">
+    <section id="experience">
         <div class="inner">
             <div class="section-header">
-                <span class="section-title">WORK</span>
+                <span class="section-title">EXPERIENCE</span>
                 <p class="section-desc">실무에서의 문제 해결과 개인적인 기술 탐구 과정을 담은 프로젝트 이력입니다.</p>
             </div>
 
@@ -19,8 +19,15 @@
                         <div class="info-content">
                             <span class="content-title">{{ work.company }}</span>
                             <p class="content-subtitle">{{ work.brief }}</p>
+                            <span>{{ work.role }}</span>
                             <div class="info-card">
                                 <span v-for="skill in work.skills" :key="skill">{{ skill }}</span>
+                            </div>
+                            <div class="info-keys">
+                                <div v-for="key in work.keyAchievements">
+                                    <p class="heading">{{ key.heading }}</p>
+                                    <p class="detail">{{ key.detail }}</p>
+                                </div>
                             </div>
                             <button class="content-action" @click="openDetail(work.detail)">
                                 <OpenIcon class="icon open-icon" />
@@ -107,12 +114,28 @@ const toggleDetail = (id) => {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+    margin: 12px 0px;
     padding: 1.25rem;
     border-radius: 0.5rem;
     background-color: rgba(255, 255, 255, 0.03);
     text-align: left;
     line-height: 1.3;
 }
+.info-keys {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+    line-height: 1.3;
+}
+.info-keys .heading {
+    font-weight: 600;
+}
+.info-keys .detail {
+    margin-left: 10px;
+    color: var(--gray-color);
+}
+
 
 .status-icon.active {
     stroke: var(--point-color);
