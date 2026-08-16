@@ -7,6 +7,12 @@
             </div>
 
             <div class="skills-wrap">
+                <div class="skill-summary">
+                    <div v-for="item in SKILL_SUMMARY" :key="item.label" class="skill-summary-item">
+                        <span>{{ item.label }}</span>
+                        <p>{{ item.value }}</p>
+                    </div>
+                </div>
                 <ul class="skills-nav">
                     <li v-for="category in SKILL_CATEGORIES" :key="category" :class="{ active: activeCategory === category }" @click="selectCategory(category)">
                         {{ category }}
@@ -30,7 +36,7 @@
 </template>
 
 <script setup>
-import { SKILL_CATEGORIES, SKILL_LOGOS } from '@/constants/index'
+import { SKILL_CATEGORIES, SKILL_LOGOS, SKILL_SUMMARY } from '@/constants/index'
 import { ref } from 'vue'
 
 const activeCategory = ref('ALL')
@@ -45,6 +51,33 @@ const selectCategory = (category) => {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.skill-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.skill-summary-item {
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.8rem;
+    background: rgba(255, 255, 255, 0.025);
+    text-align: left;
+}
+.skill-summary-item span {
+    color: var(--point-color);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+.skill-summary-item p {
+    margin-top: 0.45rem;
+    color: var(--text-color);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    word-break: keep-all;
 }
 
 ul.skills-nav {
@@ -79,6 +112,10 @@ ul.skills-nav li.active {
 }
 
 @media (max-width: 640px) {
+    .skill-summary {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+    }
     ul.skills-nav {
         display: flex;
         justify-content: space-between;

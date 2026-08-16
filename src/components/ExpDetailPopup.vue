@@ -48,7 +48,7 @@ import CloseIcon from '@/assets/icons/close.svg'
 
 const props = defineProps({
     data: {
-        type: Object,
+        type: Array,
         required: true,
     },
 })

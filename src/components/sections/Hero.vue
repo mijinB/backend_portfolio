@@ -1,8 +1,14 @@
 <template>
     <section>
         <div class="inner">
+            <span class="eyebrow">BACKEND-FOCUSED FULL-STACK DEVELOPER</span>
             <h1>기본부터 탄탄하게 고민하고 해결하는 개발자, <strong>백미진</strong>입니다.</h1>
             <p class="description">보이지 않는 곳의 완벽함이, 보이는 곳의 신뢰를 만든다고 믿습니다.</p>
+            <div class="proof-list" aria-label="주요 경력 요약">
+                <span><strong>70%</strong> 대시보드 TTFB 개선</span>
+                <span><strong>10+→약 5명</strong> 신학기 임시 운영 인력 감소 기여</span>
+                <span><strong>1인 개발</strong> 누리알리미 웹 서비스</span>
+            </div>
             <a href="/resume.pdf" download="백미진_이력서.pdf" class="download-btn">
                 이력서 다운로드
                 <DownloadIcon />
@@ -16,8 +22,16 @@ import DownloadIcon from '@/assets/icons/download.svg'
 </script>
 
 <style scoped>
+.eyebrow {
+    display: inline-block;
+    margin-top: 4rem;
+    color: var(--point-color);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+}
 h1 {
-    margin-top: 5rem;
+    margin-top: 1.2rem;
     color: var(--text-color);
     font-size: 3rem;
     line-height: 1.4;
@@ -46,6 +60,25 @@ h1 > strong::after {
     line-height: 1.6;
     word-break: keep-all;
 }
+.proof-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.6rem;
+}
+.proof-list span {
+    padding: 0.55rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.025);
+    color: var(--gray-color);
+    font-size: 0.86rem;
+}
+.proof-list strong {
+    margin-right: 0.25rem;
+    color: var(--text-color);
+}
 .download-btn {
     display: inline-flex;
     align-items: center;
@@ -65,8 +98,12 @@ h1 > strong::after {
 }
 
 @media (max-width: 640px) {
+    .eyebrow {
+        margin-top: 2rem;
+        font-size: 0.72rem;
+    }
     h1 {
-        margin-top: 3rem;
+        margin-top: 1rem;
         font-size: 1.9rem;
         word-break: keep-all;
         letter-spacing: 0.05rem;
@@ -77,6 +114,10 @@ h1 > strong::after {
     }
     .description {
         font-size: 1rem;
+    }
+    .proof-list {
+        align-items: stretch;
+        flex-direction: column;
     }
     .download-btn {
         margin-top: 1.5rem;

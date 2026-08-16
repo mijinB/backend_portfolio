@@ -3,7 +3,7 @@
         <div class="inner">
             <div class="section-header">
                 <span class="section-title">EXPERIENCE</span>
-                <p class="section-desc">실무에서의 문제 해결과 개인적인 기술 탐구 과정을 담은 프로젝트 이력입니다.</p>
+                <p class="section-desc">서비스를 책임지며 성능, 데이터, 운영 프로세스를 개선해온 기록입니다.</p>
             </div>
 
             <div>
@@ -19,12 +19,15 @@
                         <div class="info-content">
                             <span class="content-title">{{ work.company }}</span>
                             <p class="content-subtitle">{{ work.brief }}</p>
-                            <span>{{ work.role }}</span>
-                            <div class="info-card">
-                                <span v-for="skill in work.skills" :key="skill">{{ skill }}</span>
+                            <div class="service-list">
+                                <article v-for="service in work.services" :key="service.title" class="service-card">
+                                    <span class="service-period">{{ service.period }}</span>
+                                    <strong>{{ service.title }}</strong>
+                                    <p>{{ service.detail }}</p>
+                                </article>
                             </div>
                             <div class="info-keys">
-                                <div v-for="key in work.keyAchievements">
+                                <div v-for="key in work.keyAchievements" :key="key.heading">
                                     <p class="heading">{{ key.heading }}</p>
                                     <p class="detail">{{ key.detail }}</p>
                                 </div>
@@ -128,6 +131,38 @@ const toggleDetail = (id) => {
     text-align: left;
     line-height: 1.3;
 }
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    width: 100%;
+    margin: 0.4rem 0 1rem;
+}
+.service-card {
+    padding: 1rem;
+    border: 1px solid rgba(96, 165, 250, 0.18);
+    border-radius: 0.65rem;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.07), rgba(45, 212, 191, 0.035));
+    text-align: left;
+}
+.service-card .service-period {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--sub-point-color);
+    font-size: 0.78rem;
+}
+.service-card strong {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+.service-card p {
+    color: var(--gray-color);
+    font-size: 0.84rem;
+    line-height: 1.6;
+    word-break: keep-all;
+}
 .info-keys .heading {
     font-weight: 600;
 }
@@ -135,7 +170,6 @@ const toggleDetail = (id) => {
     margin-left: 10px;
     color: var(--gray-color);
 }
-
 
 .status-icon.active {
     stroke: var(--point-color);
@@ -171,6 +205,10 @@ const toggleDetail = (id) => {
 @media (max-width: 640px) {
     .info-card {
         padding: 1rem;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
     }
 
     .detail-wrapper.is-open {
